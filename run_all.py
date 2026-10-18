@@ -104,6 +104,21 @@ def stop_all():
             proc.kill()
 
 
+def go_binary_runs():
+    """True if the prebuilt Go binary can execute on this machine (right OS/CPU)."""
+    if not GO_BIN.exists():
+        return False
+    try:
+        subprocess.run([str(GO_BIN), "-h"], cwd=ROOT, env=ENV, timeout=5,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return True
+    except subprocess.TimeoutExpired:
+        return True  # it started and kept running, so the format is fine
+    except OSError as exc:  # e.g. [Errno 8] Exec format error (binary built for ARM/Termux)
+        log(f"existing Go binary cannot run here: {exc}")
+        return False
+
+
 def db_ready():
     try:
         conn = sqlite3.connect(DB_PATH)
@@ -115,16 +130,24 @@ def db_ready():
 
 
 def main():
-    require("node", "Install Node.js (e.g. Termux: pkg install nodejs-lts).")
-    if not GO_BIN.exists():
-        require("go", "Install Go to build the UDP match server (Termux: pkg install golang).")
-        log("building Go match server (first build can take a while)...")
-        build = subprocess.run(
-            ["go", "build", "-o", str(GO_BIN), "."], cwd=ROOT / "match-server"
-        )
-        if build.returncode != 0:
-            log("Go build failed; see error above.")
-            sys.exit(1)
+    node_available = shutil.which("node") is not None
+    if not node_available:
+        log("Node.js not found: TCP matchmaking will be SKIPPED (install Node.js, or use the Docker deploy).")
+    udp_available = True
+    if not go_binary_runs():
+        if shutil.which("go") is None:
+            log("Go is not installed and no compatible match-server binary exists.")
+            log("UDP match server will be SKIPPED. Use the Docker deploy (it installs Go) for matches.")
+            udp_available = False
+        else:
+            log("building Go match server for this machine (first build can take a while)...")
+            GO_BIN.unlink(missing_ok=True)
+            build = subprocess.run(
+                ["go", "build", "-o", str(GO_BIN), "."], cwd=ROOT / "match-server"
+            )
+            if build.returncode != 0:
+                log("Go build failed; see error above. UDP match server will be SKIPPED.")
+                udp_available = False
 
     py = sys.executable
     # 1) HTTP + SQLite first: it owns the account/session state.
@@ -137,12 +160,14 @@ def main():
         log("SQLite account state did not initialise in time (continuing anyway).")
 
     # 2) Go UDP match server
-    start("udp-match", [str(GO_BIN), "-addr", f":{UDP_PORT}"])
+    if udp_available:
+        start("udp-match", [str(GO_BIN), "-addr", f":{UDP_PORT}"])
     # 3) Notification / presence gateway
     start("notify", [py, "-u", "notification_gateway.py", "--host", HOST,
                      "--port", str(NOTIFICATION_PORT), "--log-dir", str(ROOT / "logs")])
     # 4) Node TCP matchmaking
-    start("tcp-match", ["node", "transport/tcp_matchmaking.js", "--host", HOST,
+    if node_available:
+        start("tcp-match", ["node", "transport/tcp_matchmaking.js", "--host", HOST,
                         "--port", str(GAME_NODE_PORT), "--udp-port", str(UDP_PORT),
                         "--state", str(ROOT / "data" / "account_state.json"),
                         "--db", str(DB_PATH)])
