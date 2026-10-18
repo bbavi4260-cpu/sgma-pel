@@ -1,0 +1,2 @@
+2026-10-18T08:29:52.145+00:00 [NOTIFY] started host=0.0.0.0 port=10301 scope=opaque auth/heartbeat acknowledgements only
+Sigma notification presence listener on 0.0.0.0:10301

@@ -1,0 +1,17 @@
+[tcp-mm] listening on 0.0.0.0:10300 for uid=100000001
+[tcp-mm] connected 127.0.0.1:39979
+[tcp-mm] authenticated uid=100000002 region=1 mode=exact-token-plaintext (127.0.0.1:39979)
+[tcp-mm] uid=100000002 app payload mode=plaintext (authenticated)
+[tcp-mm] GAMEOPENINGINFO uid=100000002 region=1 request_bytes=4 response=contra-squad-only
+[tcp-mm] connected 127.0.0.1:37585
+[tcp-mm] authenticated uid=100000001 region=1 mode=exact-token-plaintext (127.0.0.1:37585)
+[tcp-mm] uid=100000001 app payload mode=plaintext (authenticated)
+[tcp-mm] GAMEOPENINGINFO uid=100000001 region=1 request_bytes=4 response=contra-squad-only
+[tcp-mm] uid=100000002 app payload mode=plaintext (authenticated)
+[tcp-mm] START uid=100000002 mode=1:15:1:1
+[tcp-mm] uid=100000001 app payload mode=plaintext (authenticated)
+[tcp-mm] SUSS match=1792312192618001 uid=100000002 addr=127.0.0.1:10200 requested_mode=15 handoff_mode=15 map=1 -> client should now open UDP; look for '[mm-udp] new session' in udp_game_node.console.log
+[tcp-mm] SUSS match=1792312192618001 uid=100000001 addr=127.0.0.1:10200 requested_mode=15 handoff_mode=15 map=1 -> client should now open UDP; look for '[mm-udp] new session' in udp_game_node.console.log
+[tcp-mm] START uid=100000001 mode=1:15:1:1
+[tcp-mm] disconnected 127.0.0.1:39979
+[tcp-mm] disconnected 127.0.0.1:37585

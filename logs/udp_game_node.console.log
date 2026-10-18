@@ -1,0 +1,1030 @@
+2026/10/18 08:29:51 Weapon 19 -> 35 skins (estáticas)
+2026/10/18 08:29:51 Weapon 36 -> 30 skins (estáticas)
+2026/10/18 08:29:51 Weapon 29 -> 59 skins (estáticas)
+2026/10/18 08:29:51 Weapon 42 -> 10 skins (estáticas)
+2026/10/18 08:29:51 Weapon 45 -> 25 skins (estáticas)
+2026/10/18 08:29:51 Weapon 33 -> 41 skins (estáticas)
+2026/10/18 08:29:51 Weapon 48 -> 10 skins (estáticas)
+2026/10/18 08:29:51 Weapon 9 -> 15 skins (estáticas)
+2026/10/18 08:29:51 Weapon 999 -> 11 skins (estáticas)
+2026/10/18 08:29:51 Weapon 27 -> 103 skins (estáticas)
+2026/10/18 08:29:51 Weapon 30 -> 67 skins (estáticas)
+2026/10/18 08:29:51 Weapon 4 -> 51 skins (estáticas)
+2026/10/18 08:29:51 Weapon 15 -> 87 skins (estáticas)
+2026/10/18 08:29:51 Weapon 17 -> 185 skins (estáticas)
+2026/10/18 08:29:51 Weapon 23 -> 34 skins (estáticas)
+2026/10/18 08:29:51 Weapon 35 -> 55 skins (estáticas)
+2026/10/18 08:29:51 Weapon 32 -> 64 skins (estáticas)
+2026/10/18 08:29:51 Weapon 10 -> 26 skins (estáticas)
+2026/10/18 08:29:51 Weapon 52 -> 31 skins (estáticas)
+2026/10/18 08:29:51 Weapon 26 -> 26 skins (estáticas)
+2026/10/18 08:29:51 Weapon 16 -> 205 skins (estáticas)
+2026/10/18 08:29:51 Weapon 12 -> 106 skins (estáticas)
+2026/10/18 08:29:51 Weapon 39 -> 17 skins (estáticas)
+2026/10/18 08:29:51 Weapon 14 -> 47 skins (estáticas)
+2026/10/18 08:29:51 Weapon 24 -> 79 skins (estáticas)
+2026/10/18 08:29:51 Weapon 46 -> 12 skins (estáticas)
+2026/10/18 08:29:51 Weapon 13 -> 42 skins (estáticas)
+2026/10/18 08:29:51 Weapon 3 -> 16 skins (estáticas)
+2026/10/18 08:29:51 Weapon 18 -> 46 skins (estáticas)
+2026/10/18 08:29:51 Weapon 49 -> 9 skins (estáticas)
+2026/10/18 08:29:51 Weapon 20 -> 20 skins (estáticas)
+2026/10/18 08:29:51 Weapon 31 -> 6 skins (estáticas)
+2026/10/18 08:29:51 Weapon 21 -> 36 skins (estáticas)
+2026/10/18 08:29:51 Weapon 50 -> 13 skins (estáticas)
+2026/10/18 08:29:51 Weapon 43 -> 10 skins (estáticas)
+2026/10/18 08:29:51 Weapon 44 -> 23 skins (estáticas)
+2026/10/18 08:29:51 Weapon 22 -> 5 skins (estáticas)
+2026/10/18 08:29:51 Weapon 2 -> 98 skins (estáticas)
+2026/10/18 08:29:51 Weapon 7 -> 82 skins (estáticas)
+2026/10/18 08:29:51 Weapon 28 -> 60 skins (estáticas)
+2026/10/18 08:29:51 Weapon 41 -> 37 skins (estáticas)
+2026/10/18 08:29:51 Weapon 37 -> 30 skins (estáticas)
+2026/10/18 08:29:51 Weapon 51 -> 11 skins (estáticas)
+2026/10/18 08:29:51 Weapon 6 -> 99 skins (estáticas)
+2026/10/18 08:29:51 Weapon 5 -> 80 skins (estáticas)
+2026/10/18 08:29:51 Weapon 40 -> 15 skins (estáticas)
+2026/10/18 08:29:51 Weapon 25 -> 15 skins (estáticas)
+2026/10/18 08:29:51 Weapon 8 -> 79 skins (estáticas)
+2026/10/18 08:29:51 Weapon 11 -> 43 skins (estáticas)
+2026/10/18 08:29:51 Weapon 38 -> 23 skins (estáticas)
+2026/10/18 08:29:51 Armas configuradas: 50 com um total de 2329 skins
+2026/10/18 08:29:51 [mm-udp] config: MATCH_BR_CS_GRI=true MATCH_BOT=true MATCH_NO_ZONE=true MATCH_HOLD_PREPARE=false jwt=26B
+2026/10/18 08:29:51 [mm-udp] match server listening on [::]:10200 (udp) — 8 receive socket(s), SO_REUSEPORT=true
+2026/10/18 08:31:29 [mm-udp] new session 127.0.0.1:58771
+2026/10/18 08:31:29 [mm-udp] recv 127.0.0.1:58771 cmd=1 so=1 seq=0 order=0 flags=1 len=0
+2026/10/18 08:31:29 [mm-udp] HELLO(cmd=1) 127.0.0.1:58771 -> S2C_Hello_Res (18B)
+2026/10/18 08:31:29 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:29 [mm-udp] new session 127.0.0.1:49770
+2026/10/18 08:31:29 [mm-udp] recv 127.0.0.1:49770 cmd=1 so=1 seq=0 order=0 flags=1 len=0
+2026/10/18 08:31:29 [mm-udp] HELLO(cmd=1) 127.0.0.1:49770 -> S2C_Hello_Res (18B)
+2026/10/18 08:31:29 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=448 so=2 seq=1 order=0 flags=1 len=645
+2026/10/18 08:31:31 [mm-udp] join posted on cmd=448 (current protocol, legacyTail=false) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] JOIN prepare_token found in cmd 440 by scan (532B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] prepare_token OK: acc=100000001 name="LOCAL_SIGMA_TEST" region="IND" role=1 match=1792312192618001 map=0 mode=0 avatar=102000004 clothes=4 slots=15 emotes=0
+2026/10/18 08:31:31 [mm-udp] join route: acc=100000001 mid=1792312192618001 -> NEW match (no joinable match found; 0 live)
+2026/10/18 08:31:31 [mm-udp] CS spawn: city="shipyard" faction=0 pos=(306.0,9.7,769.7) face=(0.87,0.00,-0.49)
+2026/10/18 08:31:31 [mm-udp] roster+ slot=1 entity=0x01000001 rep=1000 faction=0 team=1 (roster=1) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> starting CS match loop (base 100ms, stream 300ms, clock 250ms) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=100 LGIGCGIDOKP result=0 (seq=1 order=0 129B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=101 GKBDLJFGGMI acc=100000001 ent=16777217 "LOCAL_SIGMA_TEST" (seq=2 order=1 380B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=130 JoinMatchFinished (CS) (seq=3 order=2 3B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=176 SYNC_REGION_ACTIVITIES (DEFAULT) — trigger dynamic-prefab visibility (jump pads/boxes) (seq=4 order=3 110B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=117 SafeZone stage=1 span=1 r=86->1 center=(363,737) end=2077342342ms (seq=6 order=5 36B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=457 zone-index city="shipyard" zone=4 (seq=7 order=6 7B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] stream: sending PRI + Clash Squad GRI (cmd=901) — battleRoyale=false brCSGRI=true
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=448 so=2 seq=1 order=0 flags=1 len=641
+2026/10/18 08:31:31 [mm-udp] join posted on cmd=448 (current protocol, legacyTail=false) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] JOIN prepare_token found in cmd 440 by scan (528B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] prepare_token OK: acc=100000002 name="GUEST_PLAYER2" region="IND" role=1 match=1792312192618001 map=0 mode=0 avatar=102000004 clothes=4 slots=15 emotes=0
+2026/10/18 08:31:31 [mm-udp] join route: acc=100000002 mid=1792312192618001 -> existing match with the SAME match id (started=false roster=1)
+2026/10/18 08:31:31 [mm-udp] roster+ slot=3 entity=0x02000003 rep=1002 faction=1 team=2 (roster=2) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] admitted player slot=3 ent=0x02000003 (roster=2) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=100 join res (2nd+ player) (seq=1 order=0 129B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=101 self ent=33554435 "GUEST_PLAYER2" (seq=2 order=1 377B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=101 new player ent=33554435 "GUEST_PLAYER2" -> 127.0.0.1:58771 (seq=8 order=7 377B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=101 other ent=16777217 "LOCAL_SIGMA_TEST" (seq=3 order=2 380B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=174 existing ent=0x1000001 inventory -> joiner (seq=4 order=3 22B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=130 JoinMatchFinished (CS) (seq=5 order=4 3B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=118 BindPRI self ent=0x1000001 (+1 humans, bot=0x0) (seq=9 order=8 20B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=176 SYNC_REGION_ACTIVITIES (DEFAULT) — trigger dynamic-prefab visibility (jump pads/boxes) (seq=6 order=5 110B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=118 BindPRI self ent=0x2000003 (+1 humans, bot=0x0) (seq=7 order=6 20B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=174 SyncInventory (USP + ammo) -> all (remotes render the held weapon + skin) (seq=10 order=9 120B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] -> cmd=174 SyncInventory (USP + ammo) -> all (remotes render the held weapon + skin) (seq=8 order=7 120B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=1 (all) (seq=11 order=10 27B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=1 (all) (seq=9 order=8 27B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=1 (all) (seq=10 order=9 27B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=117 SafeZone stage=1 span=1 r=86->1 center=(363,737) end=90170ms (seq=11 order=10 36B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=1 (all) (seq=12 order=11 27B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=117 SafeZone stage=1 span=1 r=86->1 center=(363,737) end=90170ms (seq=14 order=13 36B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] -> cmd=118 BindPRI self ent=0x2000003 (+1 humans, bot=0x0) (seq=12 order=11 20B) 127.0.0.1:49770
+2026/10/18 08:31:31 [mm-udp] -> cmd=118 BindPRI self ent=0x1000001 (+1 humans, bot=0x0) (seq=15 order=14 20B) 127.0.0.1:58771
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (USP + ammo) -> all (remotes render the held weapon + skin) (seq=16 order=15 120B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=1 (all) (seq=17 order=16 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 cmd=408 setting max durability for armor piece, id=303
+2026/10/18 08:31:35 cmd=408 setting max durability for armor piece, id=306
+2026/10/18 08:31:35 [mm-udp] auto-loadout granted to 0x1000001 (AK, M4A1, vest, helmet, gloo, grenade where empty)
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=1 (all) (seq=18 order=17 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 cmd=408 setting max durability for armor piece, id=303
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (USP + ammo) -> all (remotes render the held weapon + skin) (seq=13 order=12 120B) 127.0.0.1:49770
+2026/10/18 08:31:35 cmd=408 setting max durability for armor piece, id=306
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=413/407 CSShop (48 items, "os originais sempre representando.") (seq=19 order=18 569B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=547/533 mushroom count 0/2 (seq=20 order=19 14B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] auto-loadout granted to 0x2000003 (AK, M4A1, vest, helmet, gloo, grenade where empty)
+2026/10/18 08:31:35 [mm-udp] match started (roster=2 bot=0x0) -> buy phase; locked to new joins
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 6 x1, +5 attach) -> all (seq=21 order=20 161B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=6 (all) (seq=22 order=21 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=6 (all) (seq=23 order=22 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=1 (all) (seq=14 order=13 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=1 (all) (seq=15 order=14 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=6 (all) (seq=24 order=23 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=413/407 CSShop (48 items, "os originais sempre representando.") (seq=17 order=16 569B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=547/533 mushroom count 0/2 (seq=18 order=17 14B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 6 x1, +5 attach) -> all (seq=19 order=18 161B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=6 (all) (seq=25 order=24 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=6 (all) (seq=26 order=25 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 2 x1, +5 attach) -> all (seq=27 order=26 170B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=6 (all) (seq=20 order=19 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=13 (all) (seq=28 order=27 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=6 (all) (seq=21 order=20 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=13 (all) (seq=29 order=28 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=6 (all) (seq=22 order=21 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=6 (all) (seq=23 order=22 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=13 (all) (seq=30 order=29 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=13 (all) (seq=31 order=30 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=13 (all) (seq=32 order=31 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=6 (all) (seq=24 order=23 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 303 x1, +0 attach) -> all (seq=33 order=32 83B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 306 x1, +0 attach) -> all (seq=34 order=33 92B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 1201 x3, +0 attach) -> all (seq=35 order=34 101B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 601 x1, +0 attach) -> all (seq=36 order=35 110B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 6 x1, +5 attach) -> all (seq=37 order=36 161B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=6 (all) (seq=38 order=37 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=6 (all) (seq=39 order=38 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=6 (all) (seq=40 order=39 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=6 (all) (seq=41 order=40 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=6 (all) (seq=42 order=41 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 2 x1, +5 attach) -> all (seq=44 order=43 170B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=13 (all) (seq=45 order=44 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=13 (all) (seq=46 order=45 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=13 (all) (seq=47 order=46 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=13 (all) (seq=48 order=47 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=13 (all) (seq=49 order=48 27B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 303 x1, +0 attach) -> all (seq=51 order=50 83B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 306 x1, +0 attach) -> all (seq=53 order=52 92B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 1201 x3, +0 attach) -> all (seq=55 order=54 101B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 601 x1, +0 attach) -> all (seq=57 order=56 110B) 127.0.0.1:58771
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 2 x1, +5 attach) -> all (seq=26 order=25 170B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=13 (all) (seq=27 order=26 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=13 (all) (seq=28 order=27 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=13 (all) (seq=29 order=28 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=13 (all) (seq=30 order=29 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=13 (all) (seq=31 order=30 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 303 x1, +0 attach) -> all (seq=33 order=32 83B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 306 x1, +0 attach) -> all (seq=35 order=34 92B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 1201 x3, +0 attach) -> all (seq=37 order=36 101B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 601 x1, +0 attach) -> all (seq=39 order=38 110B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 6 x1, +5 attach) -> all (seq=41 order=40 161B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=6 (all) (seq=42 order=41 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=6 (all) (seq=43 order=42 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=6 (all) (seq=44 order=43 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=6 (all) (seq=45 order=44 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=6 (all) (seq=46 order=45 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 2 x1, +5 attach) -> all (seq=47 order=46 170B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=503 slot=0 -> weapon uid=13 (all) (seq=48 order=47 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=513 slot=1 -> weapon uid=13 (all) (seq=49 order=48 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=523 slot=2 -> weapon uid=13 (all) (seq=50 order=49 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=543 slot=4 -> weapon uid=13 (all) (seq=51 order=50 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=124 equip attach data=534 slot=3 -> weapon uid=13 (all) (seq=52 order=51 27B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 303 x1, +0 attach) -> all (seq=53 order=52 83B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 306 x1, +0 attach) -> all (seq=54 order=53 92B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 1201 x3, +0 attach) -> all (seq=55 order=54 101B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] -> cmd=174 SyncInventory (+item 601 x1, +0 attach) -> all (seq=56 order=55 110B) 127.0.0.1:49770
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=309 so=2 seq=2 order=1 flags=1 len=14
+2026/10/18 08:31:35 [mm-udp] 127.0.0.1:58771 UNHANDLED cmd=309 so=2 seq=2 order=1 flags=1 len=14 payload=0300d0c6883f1385b93f5243a93f
+2026/10/18 08:31:35 [mm-udp] recv 127.0.0.1:58771 cmd=431 so=2 seq=3 order=2 flags=1 len=250
+2026/10/18 08:31:35 [mm-udp] 127.0.0.1:58771 UNHANDLED cmd=431 so=2 seq=3 order=2 flags=1 len=250 payload=00000000000000000700dd00000046696c6523317c4c4c57316736333170724b51354c796255655859377a77757639493d23347c5176676f7263524c6447537179414d376842785576673354776b303d23327c57464251756d4439476d7a754571346578537164583147682f73413d23357c655a496651397a585231765a2b546e512f657770633932316943673d23337c7272414647576d586f68724e78753043394f3859444330713537733d23337c736a6448467a77306f45365939516c4f4e474b4f795074794352593d23337c73452f4b7267494646614e766d59526b65336f45433753795156553d0d00011601180308024e001d021707
+2026/10/18 08:31:35 [mm-udp] MOVE first relay slot=1 ent=0x1000001 seq=2212691968 base=2212691968
+2026/10/18 08:31:36 [mm-udp] recv 127.0.0.1:49770 cmd=309 so=2 seq=2 order=1 flags=1 len=14
+2026/10/18 08:31:36 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=309 so=2 seq=2 order=1 flags=1 len=14 payload=0300d0c6883f1385b93f5243a93f
+2026/10/18 08:31:36 [mm-udp] recv 127.0.0.1:49770 cmd=431 so=2 seq=3 order=2 flags=1 len=250
+2026/10/18 08:31:36 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=431 so=2 seq=3 order=2 flags=1 len=250 payload=00000000000000000700dd00000046696c6523317c4c4c57316736333170724b51354c796255655859377a77757639493d23347c5176676f7263524c6447537179414d376842785576673354776b303d23327c57464251756d4439476d7a754571346578537164583147682f73413d23357c655a496651397a585231765a2b546e512f657770633932316943673d23337c7272414647576d586f68724e78753043394f3859444330713537733d23337c736a6448467a77306f45365939516c4f4e474b4f795074794352593d23337c73452f4b7267494646614e766d59526b65336f45433753795156553d0d00011601180308024e001d021707
+2026/10/18 08:31:37 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=4 order=3 flags=1 len=18
+2026/10/18 08:31:37 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:37 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=4 order=3 flags=1 len=18
+2026/10/18 08:31:37 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:31:47 [mm-udp] player ent=0x1000001 went silent -> disconnected; 45s reconnect grace 127.0.0.1:58771
+2026/10/18 08:31:49 [mm-udp] player ent=0x2000003 went silent -> disconnected; 45s reconnect grace 127.0.0.1:49770
+2026/10/18 08:32:02 [mm-udp] player ent=0x1000001 reconnected (same session) 127.0.0.1:58771
+2026/10/18 08:32:03 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=5 order=4 flags=1 len=18
+2026/10/18 08:32:03 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:03 [mm-udp] player ent=0x2000003 reconnected (same session) 127.0.0.1:49770
+2026/10/18 08:32:03 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=6 order=5 flags=1 len=18
+2026/10/18 08:32:03 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:06 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=5 order=4 flags=1 len=18
+2026/10/18 08:32:06 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:06 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=6 order=5 flags=1 len=18
+2026/10/18 08:32:06 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:08 [mm-udp] MOVE first relay slot=3 ent=0x2000003 seq=2299199488 base=2299199488
+2026/10/18 08:32:14 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=7 order=6 flags=1 len=18
+2026/10/18 08:32:14 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:14 [mm-udp] recv 127.0.0.1:58771 cmd=108 so=2 seq=8 order=7 flags=1 len=8
+2026/10/18 08:32:15 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=9 order=8 flags=1 len=20
+2026/10/18 08:32:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:16 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=10 order=9 flags=1 len=18
+2026/10/18 08:32:16 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:34 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=11 order=10 flags=1 len=18
+2026/10/18 08:32:34 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:34 [mm-udp] recv 127.0.0.1:58771 cmd=108 so=2 seq=12 order=11 flags=1 len=8
+2026/10/18 08:32:34 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=13 order=12 flags=1 len=20
+2026/10/18 08:32:34 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:35 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=14 order=13 flags=1 len=20
+2026/10/18 08:32:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:35 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=15 order=14 flags=1 len=18
+2026/10/18 08:32:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:37 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=16 order=15 flags=1 len=18
+2026/10/18 08:32:37 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:37 [mm-udp] recv 127.0.0.1:58771 cmd=133 so=2 seq=17 order=16 flags=1 len=13
+2026/10/18 08:32:37 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:38 [mm-udp] recv 127.0.0.1:58771 cmd=113 so=2 seq=18 order=17 flags=1 len=12
+2026/10/18 08:32:38 [mm-udp] cmd=113 USE_INVENTORY uid=7 data=201 -> 119 left
+2026/10/18 08:32:38 [mm-udp] recv 127.0.0.1:58771 cmd=134 so=2 seq=19 order=18 flags=1 len=13
+2026/10/18 08:32:38 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=20 order=19 flags=1 len=20
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=21 order=20 flags=1 len=20
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=22 order=21 flags=1 len=18
+2026/10/18 08:32:39 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:41 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=23 order=22 flags=1 len=18
+2026/10/18 08:32:41 [mm-udp] recv 127.0.0.1:58771 cmd=133 so=2 seq=24 order=23 flags=1 len=13
+2026/10/18 08:32:41 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:41 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:42 [mm-udp] recv 127.0.0.1:58771 cmd=113 so=2 seq=25 order=24 flags=1 len=12
+2026/10/18 08:32:42 [mm-udp] recv 127.0.0.1:58771 cmd=134 so=2 seq=26 order=25 flags=1 len=13
+2026/10/18 08:32:42 [mm-udp] cmd=113 USE_INVENTORY uid=7 data=201 -> 118 left
+2026/10/18 08:32:42 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=27 order=26 flags=1 len=20
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=28 order=27 flags=1 len=20
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=106 so=2 seq=29 order=28 flags=1 len=420
+2026/10/18 08:32:49 [mm-udp] TAKE_DAMAGE victim=0x2000003 dmg=21 -> HP=179
+2026/10/18 08:32:49 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=63 order=62 12B) 127.0.0.1:58771
+2026/10/18 08:32:49 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=87 order=86 12B) 127.0.0.1:49770
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=106 so=2 seq=30 order=29 flags=1 len=370
+2026/10/18 08:32:49 [mm-udp] TAKE_DAMAGE victim=0x2000003 dmg=21 -> HP=158
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=65 order=64 12B) 127.0.0.1:58771
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=89 order=88 12B) 127.0.0.1:49770
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:32:50 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=31 order=30 flags=1 len=18
+2026/10/18 08:32:50 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:01 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=32 order=31 flags=1 len=20
+2026/10/18 08:33:01 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=33 order=32 flags=1 len=20
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=106 so=2 seq=34 order=33 flags=1 len=370
+2026/10/18 08:33:02 [mm-udp] TAKE_DAMAGE victim=0x2000003 dmg=6 -> HP=152
+2026/10/18 08:33:02 [mm-udp] -> cmd=174 armor refresh slot=8 uid=24 dur=296 (new item) (seq=95 order=94 38B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=67 order=66 12B) 127.0.0.1:58771
+2026/10/18 08:33:02 [mm-udp] -> cmd=121 re-equip armor slot=8 20->24 dur=296 (seq=96 order=95 21B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] -> cmd=327 remove stale armor uid=20 (seq=97 order=96 10B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=99 order=98 12B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=106 so=2 seq=35 order=34 flags=1 len=370
+2026/10/18 08:33:02 [mm-udp] TAKE_DAMAGE victim=0x2000003 dmg=6 -> HP=146
+2026/10/18 08:33:02 [mm-udp] -> cmd=174 armor refresh slot=8 uid=25 dur=292 (new item) (seq=100 order=99 38B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=69 order=68 12B) 127.0.0.1:58771
+2026/10/18 08:33:02 [mm-udp] -> cmd=121 re-equip armor slot=8 24->25 dur=292 (seq=101 order=100 21B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] -> cmd=327 remove stale armor uid=24 (seq=102 order=101 10B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=104 order=103 12B) 127.0.0.1:49770
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=36 order=35 flags=1 len=18
+2026/10/18 08:33:02 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:09 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=7 order=6 flags=1 len=20
+2026/10/18 08:33:09 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:09 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=8 order=7 flags=1 len=20
+2026/10/18 08:33:09 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:09 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:09 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:10 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=9 order=8 flags=1 len=18
+2026/10/18 08:33:10 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=10 order=9 flags=1 len=20
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=11 order=10 flags=1 len=20
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=12 order=11 flags=1 len=421
+2026/10/18 08:33:12 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=194
+2026/10/18 08:33:12 [mm-udp] -> cmd=174 armor refresh slot=8 uid=24 dur=296 (new item) (seq=79 order=78 38B) 127.0.0.1:58771
+2026/10/18 08:33:12 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=107 order=106 12B) 127.0.0.1:49770
+2026/10/18 08:33:12 [mm-udp] -> cmd=121 re-equip armor slot=8 20->24 dur=296 (seq=80 order=79 21B) 127.0.0.1:58771
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] -> cmd=327 remove stale armor uid=20 (seq=81 order=80 10B) 127.0.0.1:58771
+2026/10/18 08:33:12 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=83 order=82 12B) 127.0.0.1:58771
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=13 order=12 flags=1 len=18
+2026/10/18 08:33:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=14 order=13 flags=1 len=20
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=15 order=14 flags=1 len=20
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=16 order=15 flags=1 len=370
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=173
+2026/10/18 08:33:13 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=90 order=89 12B) 127.0.0.1:58771
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=109 order=108 12B) 127.0.0.1:49770
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:13 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:14 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=17 order=16 flags=1 len=18
+2026/10/18 08:33:14 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:15 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=37 order=36 flags=1 len=20
+2026/10/18 08:33:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:15 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=38 order=37 flags=1 len=20
+2026/10/18 08:33:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:15 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:16 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=39 order=38 flags=1 len=18
+2026/10/18 08:33:16 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=40 order=39 flags=1 len=20
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=41 order=40 flags=1 len=20
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=42 order=41 flags=1 len=18
+2026/10/18 08:33:17 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:20 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=18 order=17 flags=1 len=20
+2026/10/18 08:33:20 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=19 order=18 flags=1 len=20
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=20 order=19 flags=1 len=370
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=167
+2026/10/18 08:33:21 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=121 order=120 12B) 127.0.0.1:49770
+2026/10/18 08:33:21 [mm-udp] -> cmd=174 armor refresh slot=8 uid=25 dur=292 (new item) (seq=96 order=95 38B) 127.0.0.1:58771
+2026/10/18 08:33:21 [mm-udp] -> cmd=121 re-equip armor slot=8 24->25 dur=292 (seq=97 order=96 21B) 127.0.0.1:58771
+2026/10/18 08:33:21 [mm-udp] -> cmd=327 remove stale armor uid=24 (seq=98 order=97 10B) 127.0.0.1:58771
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=100 order=99 12B) 127.0.0.1:58771
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=21 order=20 flags=1 len=18
+2026/10/18 08:33:21 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=22 order=21 flags=1 len=20
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=23 order=22 flags=1 len=20
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=24 order=23 flags=1 len=370
+2026/10/18 08:33:22 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=161
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=123 order=122 12B) 127.0.0.1:49770
+2026/10/18 08:33:22 [mm-udp] -> cmd=174 armor refresh slot=8 uid=26 dur=288 (new item) (seq=106 order=105 38B) 127.0.0.1:58771
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] -> cmd=121 re-equip armor slot=8 25->26 dur=288 (seq=107 order=106 21B) 127.0.0.1:58771
+2026/10/18 08:33:22 [mm-udp] -> cmd=327 remove stale armor uid=25 (seq=108 order=107 10B) 127.0.0.1:58771
+2026/10/18 08:33:22 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=110 order=109 12B) 127.0.0.1:58771
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:22 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:23 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=25 order=24 flags=1 len=18
+2026/10/18 08:33:23 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=26 order=25 flags=1 len=20
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=27 order=26 flags=1 len=20
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=28 order=27 flags=1 len=370
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=155
+2026/10/18 08:33:24 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=125 order=124 12B) 127.0.0.1:49770
+2026/10/18 08:33:24 [mm-udp] -> cmd=174 armor refresh slot=8 uid=27 dur=284 (new item) (seq=116 order=115 38B) 127.0.0.1:58771
+2026/10/18 08:33:24 [mm-udp] -> cmd=121 re-equip armor slot=8 26->27 dur=284 (seq=117 order=116 21B) 127.0.0.1:58771
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] -> cmd=327 remove stale armor uid=26 (seq=118 order=117 10B) 127.0.0.1:58771
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=120 order=119 12B) 127.0.0.1:58771
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=29 order=28 flags=1 len=18
+2026/10/18 08:33:24 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:27 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=43 order=42 flags=1 len=20
+2026/10/18 08:33:27 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:27 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=44 order=43 flags=1 len=20
+2026/10/18 08:33:27 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:27 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:27 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:28 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=45 order=44 flags=1 len=18
+2026/10/18 08:33:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:29 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=46 order=45 flags=1 len=18
+2026/10/18 08:33:29 [mm-udp] recv 127.0.0.1:58771 cmd=133 so=2 seq=47 order=46 flags=1 len=13
+2026/10/18 08:33:29 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:29 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:30 [mm-udp] recv 127.0.0.1:58771 cmd=113 so=2 seq=48 order=47 flags=1 len=12
+2026/10/18 08:33:30 [mm-udp] cmd=113 USE_INVENTORY uid=7 data=201 -> 117 left
+2026/10/18 08:33:30 [mm-udp] recv 127.0.0.1:58771 cmd=134 so=2 seq=49 order=48 flags=1 len=13
+2026/10/18 08:33:30 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=30 order=29 flags=1 len=20
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=31 order=30 flags=1 len=20
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=32 order=31 flags=1 len=370
+2026/10/18 08:33:31 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=149
+2026/10/18 08:33:31 [mm-udp] -> cmd=174 armor refresh slot=8 uid=28 dur=280 (new item) (seq=126 order=125 38B) 127.0.0.1:58771
+2026/10/18 08:33:31 [mm-udp] -> cmd=121 re-equip armor slot=8 27->28 dur=280 (seq=127 order=126 21B) 127.0.0.1:58771
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=135 order=134 12B) 127.0.0.1:49770
+2026/10/18 08:33:31 [mm-udp] -> cmd=327 remove stale armor uid=27 (seq=128 order=127 10B) 127.0.0.1:58771
+2026/10/18 08:33:31 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=130 order=129 12B) 127.0.0.1:58771
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=33 order=32 flags=1 len=370
+2026/10/18 08:33:31 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=128
+2026/10/18 08:33:31 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=137 order=136 12B) 127.0.0.1:49770
+2026/10/18 08:33:31 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=132 order=131 12B) 127.0.0.1:58771
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=34 order=33 flags=1 len=370
+2026/10/18 08:33:31 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=107
+2026/10/18 08:33:31 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=139 order=138 12B) 127.0.0.1:49770
+2026/10/18 08:33:31 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=134 order=133 12B) 127.0.0.1:58771
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:31 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:32 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=35 order=34 flags=1 len=18
+2026/10/18 08:33:32 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=36 order=35 flags=1 len=20
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=37 order=36 flags=1 len=20
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=38 order=37 flags=1 len=370
+2026/10/18 08:33:33 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=86
+2026/10/18 08:33:33 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=141 order=140 12B) 127.0.0.1:58771
+2026/10/18 08:33:33 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=141 order=140 12B) 127.0.0.1:49770
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=39 order=38 flags=1 len=370
+2026/10/18 08:33:33 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=65
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=143 order=142 12B) 127.0.0.1:49770
+2026/10/18 08:33:33 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=143 order=142 12B) 127.0.0.1:58771
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=40 order=39 flags=1 len=370
+2026/10/18 08:33:33 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=44
+2026/10/18 08:33:33 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=145 order=144 12B) 127.0.0.1:49770
+2026/10/18 08:33:33 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=145 order=144 12B) 127.0.0.1:58771
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:33 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:34 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=41 order=40 flags=1 len=18
+2026/10/18 08:33:34 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:35 [mm-udp] recv 127.0.0.1:58771 cmd=131 so=2 seq=50 order=49 flags=1 len=12
+2026/10/18 08:33:35 [mm-udp] -> cmd=201 DoAction medkit cure START ent=0x1000001 item=1 -> all (remotes animate) (seq=147 order=146 19B) 127.0.0.1:58771
+2026/10/18 08:33:35 [mm-udp] -> cmd=201 DoAction medkit cure START ent=0x1000001 item=1 -> all (remotes animate) (seq=146 order=145 19B) 127.0.0.1:49770
+2026/10/18 08:33:35 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:35 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:38 [mm-udp] recv 127.0.0.1:58771 cmd=113 so=2 seq=51 order=50 flags=1 len=12
+2026/10/18 08:33:38 [mm-udp] cmd=113 USE_INVENTORY uid=2 data=102 -> 1 left
+2026/10/18 08:33:38 [mm-udp] -> cmd=201 DoAction medkit cure END ent=0x1000001 -> all (seq=148 order=147 19B) 127.0.0.1:58771
+2026/10/18 08:33:38 [mm-udp] -> cmd=201 DoAction medkit cure END ent=0x1000001 -> all (seq=147 order=146 19B) 127.0.0.1:49770
+2026/10/18 08:33:38 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:38 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:43 [mm-udp] recv 127.0.0.1:49770 cmd=131 so=2 seq=42 order=41 flags=1 len=12
+2026/10/18 08:33:43 [mm-udp] -> cmd=201 DoAction medkit cure START ent=0x2000003 item=1 -> all (remotes animate) (seq=149 order=148 19B) 127.0.0.1:58771
+2026/10/18 08:33:43 [mm-udp] -> cmd=201 DoAction medkit cure START ent=0x2000003 item=1 -> all (remotes animate) (seq=148 order=147 19B) 127.0.0.1:49770
+2026/10/18 08:33:43 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:43 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:47 [mm-udp] recv 127.0.0.1:49770 cmd=113 so=2 seq=43 order=42 flags=1 len=12
+2026/10/18 08:33:47 [mm-udp] cmd=113 USE_INVENTORY uid=2 data=102 -> 1 left
+2026/10/18 08:33:47 [mm-udp] -> cmd=201 DoAction medkit cure END ent=0x2000003 -> all (seq=149 order=148 19B) 127.0.0.1:49770
+2026/10/18 08:33:47 [mm-udp] -> cmd=201 DoAction medkit cure END ent=0x2000003 -> all (seq=150 order=149 19B) 127.0.0.1:58771
+2026/10/18 08:33:47 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:47 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=44 order=43 flags=1 len=20
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=45 order=44 flags=1 len=20
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=46 order=45 flags=1 len=370
+2026/10/18 08:33:49 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=113
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=151 order=150 12B) 127.0.0.1:49770
+2026/10/18 08:33:49 [mm-udp] -> cmd=174 armor refresh slot=8 uid=29 dur=276 (new item) (seq=155 order=154 38B) 127.0.0.1:58771
+2026/10/18 08:33:49 [mm-udp] -> cmd=121 re-equip armor slot=8 28->29 dur=276 (seq=156 order=155 21B) 127.0.0.1:58771
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] -> cmd=327 remove stale armor uid=28 (seq=157 order=156 10B) 127.0.0.1:58771
+2026/10/18 08:33:49 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=159 order=158 12B) 127.0.0.1:58771
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=47 order=46 flags=1 len=18
+2026/10/18 08:33:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=48 order=47 flags=1 len=20
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=49 order=48 flags=1 len=20
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=50 order=49 flags=1 len=370
+2026/10/18 08:33:50 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=107
+2026/10/18 08:33:50 [mm-udp] -> cmd=174 armor refresh slot=8 uid=30 dur=272 (new item) (seq=165 order=164 38B) 127.0.0.1:58771
+2026/10/18 08:33:50 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=153 order=152 12B) 127.0.0.1:49770
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] -> cmd=121 re-equip armor slot=8 29->30 dur=272 (seq=166 order=165 21B) 127.0.0.1:58771
+2026/10/18 08:33:50 [mm-udp] -> cmd=327 remove stale armor uid=29 (seq=167 order=166 10B) 127.0.0.1:58771
+2026/10/18 08:33:50 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=169 order=168 12B) 127.0.0.1:58771
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:50 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:51 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=51 order=50 flags=1 len=18
+2026/10/18 08:33:51 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:53 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=52 order=51 flags=1 len=20
+2026/10/18 08:33:53 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:53 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=53 order=52 flags=1 len=20
+2026/10/18 08:33:53 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:53 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:53 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:54 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=54 order=53 flags=1 len=18
+2026/10/18 08:33:54 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=55 order=54 flags=1 len=20
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=56 order=55 flags=1 len=20
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=57 order=56 flags=1 len=370
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] -> cmd=174 armor refresh slot=8 uid=31 dur=268 (new item) (seq=180 order=179 38B) 127.0.0.1:58771
+2026/10/18 08:33:57 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=101
+2026/10/18 08:33:57 [mm-udp] -> cmd=121 re-equip armor slot=8 30->31 dur=268 (seq=181 order=180 21B) 127.0.0.1:58771
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] -> cmd=327 remove stale armor uid=30 (seq=182 order=181 10B) 127.0.0.1:58771
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=184 order=183 12B) 127.0.0.1:58771
+2026/10/18 08:33:57 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=155 order=154 12B) 127.0.0.1:49770
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:57 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=58 order=57 flags=1 len=370
+2026/10/18 08:33:58 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=95
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=157 order=156 12B) 127.0.0.1:49770
+2026/10/18 08:33:58 [mm-udp] -> cmd=174 armor refresh slot=8 uid=32 dur=264 (new item) (seq=185 order=184 38B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=121 re-equip armor slot=8 31->32 dur=264 (seq=186 order=185 21B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=327 remove stale armor uid=31 (seq=187 order=186 10B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=189 order=188 12B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=59 order=58 flags=1 len=370
+2026/10/18 08:33:58 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=89
+2026/10/18 08:33:58 [mm-udp] -> cmd=174 armor refresh slot=8 uid=33 dur=260 (new item) (seq=190 order=189 38B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=159 order=158 12B) 127.0.0.1:49770
+2026/10/18 08:33:58 [mm-udp] -> cmd=121 re-equip armor slot=8 32->33 dur=260 (seq=191 order=190 21B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=327 remove stale armor uid=32 (seq=192 order=191 10B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=194 order=193 12B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=60 order=59 flags=1 len=370
+2026/10/18 08:33:58 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=83
+2026/10/18 08:33:58 [mm-udp] -> cmd=174 armor refresh slot=8 uid=34 dur=256 (new item) (seq=195 order=194 38B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=121 re-equip armor slot=8 33->34 dur=256 (seq=196 order=195 21B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=327 remove stale armor uid=33 (seq=197 order=196 10B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=199 order=198 12B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=161 order=160 12B) 127.0.0.1:49770
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=61 order=60 flags=1 len=370
+2026/10/18 08:33:58 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=77
+2026/10/18 08:33:58 [mm-udp] -> cmd=174 armor refresh slot=8 uid=35 dur=252 (new item) (seq=200 order=199 38B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=163 order=162 12B) 127.0.0.1:49770
+2026/10/18 08:33:58 [mm-udp] -> cmd=121 re-equip armor slot=8 34->35 dur=252 (seq=201 order=200 21B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] -> cmd=327 remove stale armor uid=34 (seq=202 order=201 10B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=204 order=203 12B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=62 order=61 flags=1 len=370
+2026/10/18 08:33:58 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=71
+2026/10/18 08:33:58 [mm-udp] -> cmd=174 armor refresh slot=8 uid=36 dur=248 (new item) (seq=205 order=204 38B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=121 re-equip armor slot=8 35->36 dur=248 (seq=206 order=205 21B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=165 order=164 12B) 127.0.0.1:49770
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] -> cmd=327 remove stale armor uid=35 (seq=207 order=206 10B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=209 order=208 12B) 127.0.0.1:58771
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:58 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=63 order=62 flags=1 len=370
+2026/10/18 08:33:59 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=65
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=167 order=166 12B) 127.0.0.1:49770
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=174 armor refresh slot=8 uid=37 dur=244 (new item) (seq=210 order=209 38B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=121 re-equip armor slot=8 36->37 dur=244 (seq=211 order=210 21B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=327 remove stale armor uid=36 (seq=212 order=211 10B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=214 order=213 12B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=64 order=63 flags=1 len=370
+2026/10/18 08:33:59 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=59
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=169 order=168 12B) 127.0.0.1:49770
+2026/10/18 08:33:59 [mm-udp] -> cmd=174 armor refresh slot=8 uid=38 dur=240 (new item) (seq=215 order=214 38B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=121 re-equip armor slot=8 37->38 dur=240 (seq=216 order=215 21B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=327 remove stale armor uid=37 (seq=217 order=216 10B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=219 order=218 12B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=65 order=64 flags=1 len=370
+2026/10/18 08:33:59 [mm-udp] -> cmd=174 armor refresh slot=8 uid=39 dur=236 (new item) (seq=220 order=219 38B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=53
+2026/10/18 08:33:59 [mm-udp] -> cmd=121 re-equip armor slot=8 38->39 dur=236 (seq=221 order=220 21B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=171 order=170 12B) 127.0.0.1:49770
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=327 remove stale armor uid=38 (seq=222 order=221 10B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=224 order=223 12B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=66 order=65 flags=1 len=370
+2026/10/18 08:33:59 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=47
+2026/10/18 08:33:59 [mm-udp] -> cmd=174 armor refresh slot=8 uid=40 dur=232 (new item) (seq=225 order=224 38B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=121 re-equip armor slot=8 39->40 dur=232 (seq=226 order=225 21B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=173 order=172 12B) 127.0.0.1:49770
+2026/10/18 08:33:59 [mm-udp] -> cmd=327 remove stale armor uid=39 (seq=227 order=226 10B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=229 order=228 12B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=67 order=66 flags=1 len=370
+2026/10/18 08:33:59 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=6 -> HP=41
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=175 order=174 12B) 127.0.0.1:49770
+2026/10/18 08:33:59 [mm-udp] -> cmd=174 armor refresh slot=8 uid=41 dur=228 (new item) (seq=230 order=229 38B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=121 re-equip armor slot=8 40->41 dur=228 (seq=231 order=230 21B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] -> cmd=327 remove stale armor uid=40 (seq=232 order=231 10B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=234 order=233 12B) 127.0.0.1:58771
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:33:59 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:00 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=68 order=67 flags=1 len=18
+2026/10/18 08:34:00 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:00 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=69 order=68 flags=1 len=18
+2026/10/18 08:34:00 [mm-udp] recv 127.0.0.1:49770 cmd=133 so=2 seq=70 order=69 flags=1 len=13
+2026/10/18 08:34:00 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:00 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:01 [mm-udp] recv 127.0.0.1:49770 cmd=113 so=2 seq=71 order=70 flags=1 len=12
+2026/10/18 08:34:01 [mm-udp] cmd=113 USE_INVENTORY uid=7 data=201 -> 119 left
+2026/10/18 08:34:01 [mm-udp] recv 127.0.0.1:49770 cmd=134 so=2 seq=72 order=71 flags=1 len=13
+2026/10/18 08:34:01 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:01 [mm-udp] recv 127.0.0.1:58771 cmd=131 so=2 seq=52 order=51 flags=1 len=12
+2026/10/18 08:34:01 [mm-udp] -> cmd=201 DoAction medkit cure START ent=0x1000001 item=1 -> all (remotes animate) (seq=239 order=238 19B) 127.0.0.1:58771
+2026/10/18 08:34:01 [mm-udp] -> cmd=201 DoAction medkit cure START ent=0x1000001 item=1 -> all (remotes animate) (seq=176 order=175 19B) 127.0.0.1:49770
+2026/10/18 08:34:01 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:01 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:05 [mm-udp] recv 127.0.0.1:58771 cmd=113 so=2 seq=53 order=52 flags=1 len=12
+2026/10/18 08:34:05 [mm-udp] cmd=113 USE_INVENTORY uid=2 data=102 -> 0 left
+2026/10/18 08:34:05 [mm-udp] -> cmd=201 DoAction medkit cure END ent=0x1000001 -> all (seq=177 order=176 19B) 127.0.0.1:49770
+2026/10/18 08:34:05 [mm-udp] -> cmd=201 DoAction medkit cure END ent=0x1000001 -> all (seq=240 order=239 19B) 127.0.0.1:58771
+2026/10/18 08:34:05 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:05 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=54 order=53 flags=1 len=20
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=104 so=2 seq=55 order=54 flags=1 len=20
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=106 so=2 seq=56 order=55 flags=1 len=421
+2026/10/18 08:34:12 [mm-udp] TAKE_DAMAGE victim=0x2000003 dmg=6 -> HP=194
+2026/10/18 08:34:12 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=242 order=241 12B) 127.0.0.1:58771
+2026/10/18 08:34:12 [mm-udp] -> cmd=174 armor refresh slot=8 uid=26 dur=288 (new item) (seq=182 order=181 38B) 127.0.0.1:49770
+2026/10/18 08:34:12 [mm-udp] -> cmd=121 re-equip armor slot=8 25->26 dur=288 (seq=183 order=182 21B) 127.0.0.1:49770
+2026/10/18 08:34:12 [mm-udp] -> cmd=327 remove stale armor uid=25 (seq=184 order=183 10B) 127.0.0.1:49770
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=186 order=185 12B) 127.0.0.1:49770
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=106 so=2 seq=57 order=56 flags=1 len=370
+2026/10/18 08:34:12 [mm-udp] TAKE_DAMAGE victim=0x2000003 dmg=21 -> HP=173
+2026/10/18 08:34:12 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=244 order=243 12B) 127.0.0.1:58771
+2026/10/18 08:34:12 [mm-udp] -> cmd=1010 hurt victim=0x2000003 src=0x1000001 (seq=188 order=187 12B) 127.0.0.1:49770
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:12 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:13 [mm-udp] recv 127.0.0.1:58771 cmd=105 so=2 seq=58 order=57 flags=1 len=18
+2026/10/18 08:34:13 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:27 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=73 order=72 flags=1 len=20
+2026/10/18 08:34:27 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=104 so=2 seq=74 order=73 flags=1 len=20
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=75 order=74 flags=1 len=421
+2026/10/18 08:34:28 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=95
+2026/10/18 08:34:28 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=191 order=190 12B) 127.0.0.1:49770
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=250 order=249 12B) 127.0.0.1:58771
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=76 order=75 flags=1 len=370
+2026/10/18 08:34:28 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=74
+2026/10/18 08:34:28 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=193 order=192 12B) 127.0.0.1:49770
+2026/10/18 08:34:28 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=252 order=251 12B) 127.0.0.1:58771
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=106 so=2 seq=77 order=76 flags=1 len=370
+2026/10/18 08:34:28 [mm-udp] TAKE_DAMAGE victim=0x1000001 dmg=21 -> HP=53
+2026/10/18 08:34:28 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=195 order=194 12B) 127.0.0.1:49770
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] -> cmd=1010 hurt victim=0x1000001 src=0x2000003 (seq=254 order=253 12B) 127.0.0.1:58771
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=78 order=77 flags=1 len=18
+2026/10/18 08:34:28 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:30 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=79 order=78 flags=1 len=18
+2026/10/18 08:34:30 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:30 [mm-udp] recv 127.0.0.1:49770 cmd=108 so=2 seq=80 order=79 flags=1 len=8
+2026/10/18 08:34:31 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=81 order=80 flags=1 len=30
+2026/10/18 08:34:31 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=81 order=80 flags=1 len=30 payload=1600000001000000287e060071240000a5d60a00000034000000abff0000
+2026/10/18 08:34:31 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=82 order=81 flags=1 len=30
+2026/10/18 08:34:31 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=82 order=81 flags=1 len=30 payload=16000000010000002d7f06007124000024d60a00000033000000aaff0000
+2026/10/18 08:34:31 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=83 order=82 flags=1 len=30
+2026/10/18 08:34:31 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=83 order=82 flags=1 len=30 payload=1600000001000000a87e060071240000ded50a00000033000000aaff0000
+2026/10/18 08:34:31 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=84 order=83 flags=1 len=30
+2026/10/18 08:34:31 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=84 order=83 flags=1 len=30 payload=1600000001000000637e060071240000d2d50a00000033000000aaff0000
+2026/10/18 08:34:32 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=85 order=84 flags=1 len=30
+2026/10/18 08:34:32 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=85 order=84 flags=1 len=30 payload=1600000001000000b27d0600712400007fd50a00000033000000aaff0000
+2026/10/18 08:34:32 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=86 order=85 flags=1 len=30
+2026/10/18 08:34:32 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=86 order=85 flags=1 len=30 payload=16000000010000005f7d0600712400006dd50a00000033000000aaff0000
+2026/10/18 08:34:32 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=87 order=86 flags=1 len=30
+2026/10/18 08:34:32 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=87 order=86 flags=1 len=30 payload=1600000001000000ee7c0600712400001bd50a00000033000000aaff0000
+2026/10/18 08:34:32 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=88 order=87 flags=1 len=30
+2026/10/18 08:34:32 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=88 order=87 flags=1 len=30 payload=1600000001000000b27c0600b7240000b8d40a00000033000000aaff0000
+2026/10/18 08:34:32 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=89 order=88 flags=1 len=30
+2026/10/18 08:34:32 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=89 order=88 flags=1 len=30 payload=1600000001000000847c06000925000012d40a00000033000000aaff0000
+2026/10/18 08:34:33 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=90 order=89 flags=1 len=30
+2026/10/18 08:34:33 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=90 order=89 flags=1 len=30 payload=1600000001000000607c060009250000bcd10a00000033000000aaff0000
+2026/10/18 08:34:34 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=91 order=90 flags=1 len=30
+2026/10/18 08:34:34 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=91 order=90 flags=1 len=30 payload=16000000010000008a7b06000925000051d00a00000033000000aaff0000
+2026/10/18 08:34:34 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=92 order=91 flags=1 len=30
+2026/10/18 08:34:34 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=92 order=91 flags=1 len=30 payload=16000000010000008a7b06000925000051d00a00000033000000aaff0000
+2026/10/18 08:34:34 [mm-udp] recv 127.0.0.1:49770 cmd=221 so=2 seq=93 order=92 flags=1 len=30
+2026/10/18 08:34:34 [mm-udp] 127.0.0.1:49770 UNHANDLED cmd=221 so=2 seq=93 order=92 flags=1 len=30 payload=16000000010000008a7b06000925000051d00a00000033000000aaff0000
+2026/10/18 08:34:38 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=94 order=93 flags=1 len=18
+2026/10/18 08:34:38 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:38 [mm-udp] recv 127.0.0.1:49770 cmd=108 so=2 seq=95 order=94 flags=1 len=8
+2026/10/18 08:34:39 [mm-udp] recv 127.0.0.1:49770 cmd=162 so=2 seq=96 order=95 flags=1 len=0
+2026/10/18 08:34:39 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:40 [mm-udp] recv 127.0.0.1:49770 cmd=163 so=2 seq=97 order=96 flags=1 len=0
+2026/10/18 08:34:40 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:40 [mm-udp] recv 127.0.0.1:49770 cmd=160 so=2 seq=98 order=97 flags=1 len=34
+2026/10/18 08:34:40 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:40 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=99 order=98 flags=1 len=18
+2026/10/18 08:34:40 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:46 [mm-udp] recv 127.0.0.1:49770 cmd=162 so=2 seq=100 order=99 flags=1 len=0
+2026/10/18 08:34:46 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:48 [mm-udp] recv 127.0.0.1:49770 cmd=163 so=2 seq=101 order=100 flags=1 len=0
+2026/10/18 08:34:48 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:49 [mm-udp] recv 127.0.0.1:49770 cmd=160 so=2 seq=102 order=101 flags=1 len=34
+2026/10/18 08:34:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:49 [mm-udp] recv 127.0.0.1:49770 cmd=105 so=2 seq=103 order=102 flags=1 len=18
+2026/10/18 08:34:49 [mm-udp] recv 127.0.0.1:58771 cmd=2 so=0 seq=0 order=0 flags=0 len=6
+2026/10/18 08:34:59 [mm-udp] player ent=0x1000001 went silent -> disconnected; 45s reconnect grace 127.0.0.1:58771
+2026/10/18 08:35:03 [mm-udp] player ent=0x2000003 went silent -> disconnected; 45s reconnect grace 127.0.0.1:49770
+2026/10/18 08:35:44 [mm-udp] player ent=0x1000001 reconnect grace expired -> removing frozen pawn 127.0.0.1:58771
+2026/10/18 08:35:44 [mm-udp] -> cmd=102 PLAYER_QUIT ent=0x1000001 "LOCAL_SIGMA_TEST" -> others (seq=266 order=265 4B) 127.0.0.1:58771
+2026/10/18 08:35:44 [mm-udp] roster- slot=1 ent=0x1000001 (roster=1) 127.0.0.1:58771
+2026/10/18 08:35:44 [mm-udp] -> cmd=102 PLAYER_QUIT ent=0x1000001 "LOCAL_SIGMA_TEST" -> others (seq=196 order=195 4B) 127.0.0.1:49770
+2026/10/18 08:35:44 [mm-udp] -> cmd=107 DEAD victim=0x1000001 killer=0x0 weapon=1 observe=0x0 pending=false (seq=267 order=266 57B) 127.0.0.1:58771
+2026/10/18 08:35:44 [mm-udp] -> cmd=107 DEAD victim=0x1000001 killer=0x0 weapon=1 observe=0x0 pending=false (seq=197 order=196 57B) 127.0.0.1:49770
+2026/10/18 08:35:44 [mm-udp] ROUND 1 won by team 2 (score 0-1)
+2026/10/18 08:35:44 [mm-udp] -> cmd=409 round result: team 2 wins round 1 (score 0-1) (seq=198 order=197 8B) 127.0.0.1:49770
+2026/10/18 08:35:44 [mm-udp] round transition -> arena="riverside" revivePlayer=true 127.0.0.1:49770
+2026/10/18 08:35:47 [mm-udp] retransmit gave up on seq=196 (8 tries) 127.0.0.1:49770
+2026/10/18 08:35:47 [mm-udp] retransmit gave up on seq=197 (8 tries) 127.0.0.1:49770
+2026/10/18 08:35:47 [mm-udp] retransmit gave up on seq=267 (8 tries) 127.0.0.1:58771
+2026/10/18 08:35:47 [mm-udp] retransmit gave up on seq=266 (8 tries) 127.0.0.1:58771
+2026/10/18 08:35:47 [mm-udp] retransmit gave up on seq=198 (8 tries) 127.0.0.1:49770
+2026/10/18 08:35:48 [mm-udp] player ent=0x2000003 reconnect grace expired -> removing frozen pawn 127.0.0.1:49770
+2026/10/18 08:35:48 [mm-udp] roster- slot=3 ent=0x2000003 (roster=0) 127.0.0.1:49770
+2026/10/18 08:35:48 [mm-udp] -> cmd=102 PLAYER_QUIT ent=0x2000003 "GUEST_PLAYER2" -> others (seq=199 order=198 4B) 127.0.0.1:49770
+2026/10/18 08:35:48 [mm-udp] -> cmd=107 DEAD victim=0x2000003 killer=0x0 weapon=1 observe=0x0 pending=false (seq=200 order=199 57B) 127.0.0.1:49770
+2026/10/18 08:35:48 [mm-udp] CS match loop stopped: roster empty
+2026/10/18 08:35:50 [mm-udp] retransmit gave up on seq=199 (8 tries) 127.0.0.1:49770
+2026/10/18 08:35:50 [mm-udp] retransmit gave up on seq=200 (8 tries) 127.0.0.1:49770
+2026/10/18 09:21:19 [mm-udp] shutdown (signal): kicked 2 client(s) via SendKick (so=3)

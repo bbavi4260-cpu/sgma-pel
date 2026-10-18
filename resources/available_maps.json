@@ -1,0 +1,7 @@
+[
+  {"map_code":"PARADISE","display_name":"PARADISE","game_mode":"BATTLEROYALE","is_available":true,"is_selected":true,"sort_order":1},
+  {"map_code":"AZORES","display_name":"AZORES","game_mode":"BATTLEROYALE","is_available":true,"is_selected":false,"sort_order":2},
+  {"map_code":"EMAPSONORAN","display_name":"EMAPSONORAN","game_mode":"BATTLEROYALE","is_available":true,"is_selected":false,"sort_order":3},
+  {"map_code":"PARADISE_NEO","display_name":"PARADISE_NEO","game_mode":"BATTLEROYALE","is_available":true,"is_selected":false,"sort_order":4},
+  {"map_code":"PARADISE_NEOMAX","display_name":"PARADISE_NEOMAX","game_mode":"BATTLEROYALE","is_available":true,"is_selected":false,"sort_order":5}
+]

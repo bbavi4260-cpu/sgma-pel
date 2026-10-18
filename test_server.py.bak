@@ -1,0 +1,1078 @@
+#!/usr/bin/env python3
+"""Clean local Sigma 1.0.113 source-first compatibility server.
+
+Design authority:
+  * FreeFireServer: canonical account, selected-profile, selected-items, and
+    persistence workflow.
+  * Matched Sigma IL2CPP/protobuf evidence: every emitted Sigma wire field.
+
+This is intentionally a bounded local compatibility server. It never invents
+wardrobe definitions, recipes, store items, rewards, or remote resources.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import sqlite3
+import threading
+import time
+import uuid
+from datetime import datetime, timezone
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
+
+
+ROOT = Path(__file__).resolve().parent
+DEFAULT_ACCOUNT_ID = 100000001
+DEFAULT_AVATAR_ID = 102000004
+DEFAULT_REGION = "IND"
+HIDE_AVATAR_ID = 102000023
+HIDE_IP_EXPIRED_AVATAR_ID = 101000023
+OPTIONAL_VERSION = (
+    "optionallocres:26|optionalclothres:282|optionalfullscreencgres:19|"
+    "optionalludores:19|optionalmap1res:194|optionalmap2res:36|"
+    "optionalmap4res:19|optionalmapres:17|optionalpetres:17|optionalrushb:38|"
+    "optionalrushingpetsres:61|optionalvoiceres:147|optionalwerewolves:48"
+)
+
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+
+
+def pb_varint(value: int) -> bytes:
+    value = int(value)
+    if value < 0:
+        value &= (1 << 64) - 1
+    out = bytearray()
+    while value > 0x7F:
+        out.append((value & 0x7F) | 0x80)
+        value >>= 7
+    out.append(value)
+    return bytes(out)
+
+
+def pb_varint_field(tag: int, value: int) -> bytes:
+    return pb_varint((int(tag) << 3) | 0) + pb_varint(value)
+
+
+def pb_bytes_field(tag: int, value: bytes) -> bytes:
+    return pb_varint((int(tag) << 3) | 2) + pb_varint(len(value)) + value
+
+
+def pb_string_field(tag: int, value: str) -> bytes:
+    return pb_bytes_field(tag, str(value).encode("utf-8"))
+
+
+def pb_packed_varints(tag: int, values: list[int]) -> bytes:
+    values = [int(value) for value in values]
+    return pb_bytes_field(tag, b"".join(pb_varint(value) for value in values)) if values else b""
+
+
+def read_varint(body: bytes, pos: int) -> tuple[int, int]:
+    value = 0
+    shift = 0
+    while pos < len(body):
+        byte = body[pos]
+        pos += 1
+        value |= (byte & 0x7F) << shift
+        if byte < 0x80:
+            return value, pos
+        shift += 7
+        if shift > 70:
+            raise ValueError("protobuf varint too long")
+    raise ValueError("truncated protobuf varint")
+
+
+def first_varint_field(body: bytes, wanted_tag: int) -> int | None:
+    """Safely recover one ordinary varint field from a protobuf request."""
+    pos = 0
+    try:
+        while pos < len(body):
+            key, pos = read_varint(body, pos)
+            tag, wire = key >> 3, key & 7
+            if tag == 0:
+                return None
+            if wire == 0:
+                value, pos = read_varint(body, pos)
+                if tag == wanted_tag:
+                    return value
+            elif wire == 1:
+                pos += 8
+            elif wire == 2:
+                length, pos = read_varint(body, pos)
+                pos += length
+            elif wire == 5:
+                pos += 4
+            else:
+                return None
+            if pos > len(body):
+                return None
+    except ValueError:
+        return None
+    return None
+
+
+def first_string_field(body: bytes, wanted_tag: int) -> str:
+    pos = 0
+    try:
+        while pos < len(body):
+            key, pos = read_varint(body, pos)
+            tag, wire = key >> 3, key & 7
+            if wire == 2:
+                length, pos = read_varint(body, pos)
+                end = pos + length
+                if end > len(body):
+                    return ""
+                value = body[pos:end]
+                pos = end
+                if tag == wanted_tag:
+                    return value.decode("utf-8", errors="replace")
+            elif wire == 0:
+                _, pos = read_varint(body, pos)
+            elif wire == 1:
+                pos += 8
+            elif wire == 5:
+                pos += 4
+            else:
+                return ""
+    except ValueError:
+        return ""
+    return ""
+
+
+def repeated_varint_field(body: bytes, wanted_tag: int) -> list[int]:
+    """Decode packed or unpacked repeated protobuf varints for ChangeClothes."""
+    values: list[int] = []
+    pos = 0
+    try:
+        while pos < len(body):
+            key, pos = read_varint(body, pos)
+            tag, wire = key >> 3, key & 7
+            if wire == 0:
+                value, pos = read_varint(body, pos)
+                if tag == wanted_tag:
+                    values.append(value)
+            elif wire == 2:
+                length, pos = read_varint(body, pos)
+                end = pos + length
+                if end > len(body):
+                    return []
+                if tag == wanted_tag:
+                    while pos < end:
+                        value, pos = read_varint(body, pos)
+                        values.append(value)
+                else:
+                    pos = end
+            elif wire == 1:
+                pos += 8
+            elif wire == 5:
+                pos += 4
+            else:
+                return []
+            if pos > len(body):
+                return []
+    except ValueError:
+        return []
+    return values
+
+
+class AccountStore:
+    """Source-style canonical local account with exactly one selected profile."""
+
+    def __init__(self, path: Path, source_profiles_path: Path):
+        self.path = path
+        self.source_profiles_path = source_profiles_path
+        self.state = self._load_or_create()
+        self._repair_selection()
+
+    def _source_profiles(self) -> list[dict]:
+        try:
+            profiles = json.loads(self.source_profiles_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            profiles = []
+        if not isinstance(profiles, list) or len(profiles) != 51:
+            raise RuntimeError("source default profile resource is unavailable or invalid")
+        return profiles
+
+    def _default(self) -> dict:
+        profiles = self._source_profiles()
+        return {
+            "source_revision": "v37_minimum_profile_response",
+            "account_id": DEFAULT_ACCOUNT_ID,
+            "account_type": 0,
+            "open_id": "LOCAL_SIGMA_OPEN_ID",
+            "region": DEFAULT_REGION,
+            "display_name": os.environ.get("SIGMA_TEST_NAME", "LOCAL_GG_DEV_TEST"),
+            "session_token": "LOCAL_SIGMA_SESSION",
+            "level": 100,
+            "exp": 250000,
+            "rank": 1,
+            "ranking_points": 1000,
+            "role": 1,
+            "elite_pass": False,
+            "ep_badge_count": 0,
+            "ep_badge_id": 0,
+            "wallet": {"coins": 999999, "gems": 999999},
+            "profile": {"profiles": profiles},
+            "selected_items": {
+                "banner_id": 900000014,
+                "head_pic": 902000003,
+                "loadouts": [102000004, 102000005],
+                "slots": [102000004, 1, 2, 3, 907000010, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "shows": [],
+            },
+            "friends": [],
+            "mails": [],
+        }
+
+    def _load_or_create(self) -> dict:
+        try:
+            with self.path.open("r", encoding="utf-8") as handle:
+                value = json.load(handle)
+            if isinstance(value, dict) and value.get("source_revision") == "v35_notification_channel_presence":
+                return value
+        except (FileNotFoundError, json.JSONDecodeError, OSError):
+            pass
+        value = self._default()
+        self._write(value)
+        return value
+
+    def _write(self, value: dict | None = None) -> None:
+        value = value if value is not None else self.state
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = self.path.with_suffix(".tmp")
+        temporary.write_text(json.dumps(value, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        temporary.replace(self.path)
+
+    def save(self) -> None:
+        self._repair_selection()
+        self._write()
+
+    def _profiles(self) -> list[dict]:
+        profile = self.state.setdefault("profile", {})
+        profiles = profile.setdefault("profiles", [])
+        if not profiles:
+            profiles.extend(self._source_profiles())
+        return profiles
+
+    def _repair_selection(self) -> None:
+        profiles = self._profiles()
+        selected = next((profile for profile in profiles if profile.get("is_selected")), profiles[0])
+        for profile in profiles:
+            profile["is_selected"] = profile is selected
+        selected_items = self.state.setdefault("selected_items", {})
+        selected_items["avatar_id"] = int(selected.get("avatar_id", DEFAULT_AVATAR_ID))
+        selected_items["clothes"] = list(selected.get("clothes", []))
+        selected_items["skin_color"] = int(selected.get("skin_color", 0))
+        # FreeFireServer _shared.syncSelectedItemsFromProfile: retain the
+        # source default slot layout, then write every equipped skill to its
+        # declared slot. This is a coupled profile/visible-selected-items state.
+        slots = list(selected_items.get("slots", []))
+        if not slots:
+            slots = [0] * 16
+        for skill in selected.get("equiped_skills", []):
+            slot_id = int(skill.get("slot_id", 0))
+            if 0 <= slot_id < len(slots):
+                slots[slot_id] = int(skill.get("skill_id", 0))
+        selected_items["slots"] = slots
+
+    def selected_profile(self) -> dict:
+        self._repair_selection()
+        return next(profile for profile in self._profiles() if profile["is_selected"])
+
+    def select_profile(self, avatar_id: int | None) -> tuple[dict, bool]:
+        profiles = self._profiles()
+        wanted = next((profile for profile in profiles if avatar_id is not None and int(profile["avatar_id"]) == int(avatar_id)), None)
+        if wanted is None:
+            return self.selected_profile(), False
+        for profile in profiles:
+            profile["is_selected"] = profile is wanted
+        self.save()
+        return wanted, True
+
+    def change_clothes(self, avatar_id: int | None, clothes: list[int], skin_color: int | None) -> dict | None:
+        """Apply the source ChangeClothes mutation and synchronize selected items."""
+        profile = self.selected_profile() if avatar_id is None else next(
+            (candidate for candidate in self._profiles() if int(candidate["avatar_id"]) == int(avatar_id)), None
+        )
+        if profile is not None:
+            if clothes:
+                profile["clothes"] = [int(value) for value in clothes]
+            if skin_color is not None:
+                profile["skin_color"] = int(skin_color)
+            # The source mutates any target profile, but visible SelectedItems
+            # is synchronized only when that target is selected.
+            if profile.get("is_selected"):
+                self._repair_selection()
+            self.save()
+        return profile
+
+    def visible_profiles(self) -> list[dict]:
+        """Keep later list cardinality aligned with LoginGetProfile in Sigma 1.0.113."""
+        return self._profiles()
+
+
+class SQLiteAccountStore(AccountStore):
+    """SQLite persistence for the complete account document and map catalog.
+
+    The old JSON file is read only once when the database has no account row;
+    it is retained as a migration backup and is never written after migration.
+    """
+
+    def __init__(self, db_path: Path, legacy_path: Path, source_profiles_path: Path, maps_seed_path: Path):
+        self.path = legacy_path
+        self.db_path = db_path
+        self.source_profiles_path = source_profiles_path
+        self.maps_seed_path = maps_seed_path
+        self._db_lock = threading.RLock()
+        self._initialize_database()
+        self._restrict_permissions()
+        self.state = self._load_or_create()
+        self._repair_selection()
+        self._write(self.state)
+
+    def _connect(self) -> sqlite3.Connection:
+        connection = sqlite3.connect(self.db_path, timeout=30)
+        connection.row_factory = sqlite3.Row
+        connection.execute("PRAGMA busy_timeout=30000")
+        return connection
+
+    def _restrict_permissions(self) -> None:
+        for path in (self.db_path, Path(str(self.db_path) + "-wal"), Path(str(self.db_path) + "-shm")):
+            try:
+                if path.exists():
+                    path.chmod(0o600)
+            except OSError:
+                pass
+
+    def _load_map_seeds(self) -> list[dict]:
+        try:
+            rows = json.loads(self.maps_seed_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as error:
+            raise RuntimeError("available_maps seed file is unavailable or invalid") from error
+        if not isinstance(rows, list) or not rows:
+            raise RuntimeError("available_maps seed file must contain at least one map")
+        validated = []
+        for index, item in enumerate(rows):
+            if not isinstance(item, dict) or not item.get("map_code"):
+                raise RuntimeError(f"available_maps seed entry {index} has no map_code")
+            validated.append({
+                "map_code": str(item["map_code"]),
+                "display_name": str(item.get("display_name") or item["map_code"]),
+                "game_mode": str(item.get("game_mode") or "BATTLEROYALE"),
+                "is_available": bool(item.get("is_available", True)),
+                "is_selected": bool(item.get("is_selected", False)),
+                "sort_order": int(item.get("sort_order", index)),
+            })
+        return validated
+
+    def _initialize_database(self) -> None:
+        self.db_path.parent.mkdir(parents=True, exist_ok=True)
+        seeds = self._load_map_seeds()
+        connection = self._connect()
+        try:
+            connection.execute("PRAGMA journal_mode=WAL")
+            with connection:
+                connection.execute("""CREATE TABLE IF NOT EXISTS schema_migrations (
+                    version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)""")
+                connection.execute("""CREATE TABLE IF NOT EXISTS account_state (
+                    account_id INTEGER PRIMARY KEY, state_json TEXT NOT NULL, updated_at TEXT NOT NULL)""")
+                connection.execute("""CREATE TABLE IF NOT EXISTS available_maps (
+                    map_code TEXT PRIMARY KEY, display_name TEXT NOT NULL,
+                    game_mode TEXT NOT NULL, is_available INTEGER NOT NULL DEFAULT 1,
+                    is_selected INTEGER NOT NULL DEFAULT 0, sort_order INTEGER NOT NULL DEFAULT 0)""")
+                for item in seeds:
+                    connection.execute(
+                        """INSERT OR IGNORE INTO available_maps
+                           (map_code, display_name, game_mode, is_available, is_selected, sort_order)
+                           VALUES (?, ?, ?, ?, ?, ?)""",
+                        (item["map_code"], item["display_name"], item["game_mode"],
+                         int(item["is_available"]), int(item["is_selected"]), item["sort_order"]),
+                    )
+                connection.execute(
+                    "INSERT OR IGNORE INTO schema_migrations(version, applied_at) VALUES(1, ?)",
+                    (utc_now(),),
+                )
+        finally:
+            connection.close()
+
+    def _import_legacy_map_config(self, connection: sqlite3.Connection, value: dict) -> None:
+        config = value.get("maps_config")
+        if not isinstance(config, dict):
+            return
+        unlocked = config.get("unlocked_maps")
+        if not isinstance(unlocked, list) or not unlocked:
+            return
+        unlocked_codes = list(dict.fromkeys(str(code) for code in unlocked if str(code).strip()))
+        for code in unlocked_codes:
+            connection.execute(
+                """INSERT OR IGNORE INTO available_maps
+                   (map_code, display_name, game_mode, is_available, is_selected, sort_order)
+                   VALUES (?, ?, ?, 1, 0, 9999)""",
+                (code, code, str(config.get("selected_model") or "BATTLEROYALE")),
+            )
+        connection.execute("UPDATE available_maps SET is_available=0, is_selected=0")
+        connection.executemany(
+            "UPDATE available_maps SET is_available=1 WHERE map_code=?",
+            [(code,) for code in unlocked_codes],
+        )
+        selected = str(config.get("selected_map") or "")
+        if selected in unlocked_codes:
+            connection.execute("UPDATE available_maps SET is_selected=1 WHERE map_code=?", (selected,))
+        elif unlocked_codes:
+            connection.execute("UPDATE available_maps SET is_selected=1 WHERE map_code=?", (unlocked_codes[0],))
+
+    def _project_maps_to_account(self, value: dict, connection: sqlite3.Connection | None = None) -> None:
+        owns_connection = connection is None
+        connection = connection or self._connect()
+        try:
+            rows = connection.execute(
+                "SELECT map_code, game_mode, is_available, is_selected FROM available_maps ORDER BY sort_order, map_code"
+            ).fetchall()
+        finally:
+            if owns_connection:
+                connection.close()
+        available = [row for row in rows if row["is_available"]]
+        selected = next((row for row in available if row["is_selected"]), available[0] if available else None)
+        config = value.get("maps_config")
+        if not isinstance(config, dict):
+            config = {}
+        config["selected_map"] = selected["map_code"] if selected else ""
+        config["selected_model"] = str(config.get("selected_model") or (selected["game_mode"] if selected else "BATTLEROYALE"))
+        config["unlocked_maps"] = [row["map_code"] for row in available]
+        value["maps_config"] = config
+
+    def _load_or_create(self) -> dict:
+        connection = self._connect()
+        try:
+            row = connection.execute("SELECT state_json FROM account_state ORDER BY account_id LIMIT 1").fetchone()
+            if row:
+                value = json.loads(row["state_json"])
+                if not isinstance(value, dict):
+                    raise RuntimeError("database account_state row is not a JSON object")
+                self._project_maps_to_account(value)
+                return value
+
+            try:
+                value = json.loads(self.path.read_text(encoding="utf-8"))
+            except (FileNotFoundError, json.JSONDecodeError, OSError):
+                value = self._default()
+            if not isinstance(value, dict) or not isinstance(value.get("account_id"), int):
+                value = self._default()
+            with connection:
+                self._import_legacy_map_config(connection, value)
+                self._project_maps_to_account(value, connection)
+                connection.execute(
+                    "INSERT INTO account_state(account_id, state_json, updated_at) VALUES(?, ?, ?)",
+                    (int(value["account_id"]), json.dumps(value, ensure_ascii=False, separators=(",", ":")), utc_now()),
+                )
+            return value
+        finally:
+            connection.close()
+
+    def _write(self, value: dict | None = None) -> None:
+        value = value if value is not None else self.state
+        with self._db_lock:
+            self._project_maps_to_account(value)
+            connection = self._connect()
+            try:
+                with connection:
+                    connection.execute(
+                        """INSERT INTO account_state(account_id, state_json, updated_at) VALUES(?, ?, ?)
+                           ON CONFLICT(account_id) DO UPDATE SET state_json=excluded.state_json,
+                           updated_at=excluded.updated_at""",
+                        (int(value["account_id"]), json.dumps(value, ensure_ascii=False, separators=(",", ":")), utc_now()),
+                    )
+            finally:
+                connection.close()
+            self._restrict_permissions()
+
+    def available_maps(self) -> list[dict]:
+        connection = self._connect()
+        try:
+            rows = connection.execute(
+                """SELECT map_code, display_name, game_mode, is_selected
+                   FROM available_maps WHERE is_available=1 ORDER BY sort_order, map_code"""
+            ).fetchall()
+            return [dict(row) for row in rows]
+        finally:
+            connection.close()
+
+    def maps_payload(self) -> dict:
+        config = self.state.get("maps_config", {})
+        return {
+            "selected_map": config.get("selected_map", ""),
+            "selected_model": config.get("selected_model", "BATTLEROYALE"),
+            "available_maps": self.available_maps(),
+        }
+
+    def select_map(self, map_code: str) -> bool:
+        connection = self._connect()
+        try:
+            with connection:
+                row = connection.execute(
+                    "SELECT 1 FROM available_maps WHERE map_code=? AND is_available=1", (map_code,)
+                ).fetchone()
+                if row is None:
+                    return False
+                connection.execute("UPDATE available_maps SET is_selected=0")
+                connection.execute("UPDATE available_maps SET is_selected=1 WHERE map_code=?", (map_code,))
+        finally:
+            connection.close()
+        self._write(self.state)
+        return True
+
+
+def profile_wire(profile: dict) -> bytes:
+    # Source proto / matched Sigma AvatarProfile: id=1, level=2, skin=3,
+    # packed clothes=4, skill slots=5, selection=6.
+    out = bytearray()
+    out += pb_varint_field(1, int(profile["avatar_id"]))
+    if "unlocked_level" in profile:
+        out += pb_varint_field(2, int(profile.get("unlocked_level", 0)))
+    if "skin_color" in profile:
+        out += pb_varint_field(3, int(profile.get("skin_color", 0)))
+    out += pb_packed_varints(4, list(profile.get("clothes", [])))
+    for skill in profile.get("equiped_skills", []):
+        out += pb_bytes_field(5, pb_varint_field(1, int(skill.get("slot_id", 0))) + pb_varint_field(2, int(skill.get("skill_id", 0))))
+    if profile.get("is_selected"):
+        out += pb_varint_field(6, 1)
+    return bytes(out)
+
+
+def selected_profile_from_account(account: dict) -> dict:
+    profiles = list(account.get("profile", {}).get("profiles", []))
+    if not profiles:
+        raise RuntimeError("source account has no avatar profiles")
+    return next((profile for profile in profiles if profile.get("is_selected")), profiles[0])
+
+
+def hide_avatar_body() -> bytes:
+    # Phone-verified V25 inner CSGetHideAvatarRes bytes.
+    return pb_bytes_field(1, pb_varint(HIDE_AVATAR_ID)) + pb_bytes_field(2, pb_varint(HIDE_IP_EXPIRED_AVATAR_ID))
+
+
+def login_desc_response() -> bytes:
+    # Sigma LoginDescRes.hide_res = field 8.
+    return pb_bytes_field(8, hide_avatar_body())
+
+
+def major_login_response(handler: BaseHTTPRequestHandler, account: dict) -> bytes:
+    region = str(account.get("region") or DEFAULT_REGION)
+    token = str(account.get("session_token") or "LOCAL_SIGMA_SESSION")
+    base = handler.base_url()
+    response = b"".join([
+        pb_varint_field(1, int(account["account_id"])),
+        pb_string_field(2, region),
+        pb_string_field(3, region),
+        pb_string_field(7, region),
+        pb_string_field(8, token),
+        pb_varint_field(9, 28800),
+        pb_string_field(10, base),
+        pb_varint_field(12, 0),
+        pb_varint_field(17, 0),
+        pb_string_field(20, region),
+    ])
+    # Verified MajorLoginRes queue field, preserving normal non-banned flow.
+    queue = b"".join([pb_varint_field(1, 1), pb_varint_field(2, 0), pb_varint_field(3, 0), pb_varint_field(4, 0)])
+    return response + pb_bytes_field(15, queue)
+
+
+def login_data_response(account: dict) -> bytes:
+    """Bounded Sigma LoginRes using the recovered V25 tag registry."""
+    account_id = int(account["account_id"])
+    region = str(account.get("region") or DEFAULT_REGION)
+    nickname = str(account.get("display_name") or "LOCAL_SIGMA_TEST")
+    event_url = os.environ.get("SIGMA_EVENT_LOG_URL", "http://127.0.0.1:3000/")
+    node = os.environ.get("SIGMA_GAME_NODE", "127.0.0.1:10101")
+    chat = os.environ.get("SIGMA_CHAT_ADDR", "127.0.0.1:10200")
+    notification = os.environ.get("SIGMA_NOTIFICATION_CHANNEL", "127.0.0.1:10300")
+    server_time = int(time.time())
+    region_item = pb_varint_field(1, 1) + pb_string_field(2, region)
+    ping_addr = pb_string_field(1, node) + pb_varint_field(2, 0)
+    server_node = b"".join([
+        pb_string_field(1, region), pb_string_field(2, "node1"), pb_string_field(3, node),
+        pb_varint_field(4, 1), pb_varint_field(5, 1000),
+    ])
+    wallet = account.get("wallet", {})
+    return b"".join([
+        pb_varint_field(1, account_id), pb_varint_field(2, 1),
+        pb_string_field(3, region), pb_string_field(4, nickname),
+        pb_varint_field(5, 1696987156), pb_varint_field(6, int(account.get("level", 1))),
+        pb_varint_field(7, int(account.get("exp", 0))), pb_varint_field(8, 1),
+        pb_varint_field(9, int(wallet.get("coins", 0))), pb_varint_field(10, int(wallet.get("gems", 0))),
+        pb_string_field(14, notification), pb_varint_field(15, 1), pb_string_field(16, event_url),
+        pb_bytes_field(19, region_item), pb_varint_field(20, 0), pb_varint_field(23, server_time),
+        pb_string_field(24, region), pb_varint_field(25, 0), pb_varint_field(26, 0),
+        pb_varint_field(27, 0), pb_varint_field(28, 0), pb_varint_field(29, 0),
+        pb_varint_field(30, 0), pb_varint_field(31, 0), pb_string_field(32, chat),
+        pb_varint_field(33, 0), pb_string_field(39, event_url), pb_bytes_field(40, ping_addr),
+        pb_string_field(42, region), pb_bytes_field(44, server_node), pb_varint_field(45, server_time),
+        pb_varint_field(47, 2), pb_bytes_field(48, b""),
+    ])
+
+
+def login_profile_response(account: dict, profiles: list[dict]) -> bytes:
+    profile_res = b"".join(pb_bytes_field(1, profile_wire(profile)) for profile in profiles)
+    skills = {
+        int(skill.get("skill_id", 0))
+        for profile in profiles
+        for skill in profile.get("equiped_skills", [])
+        if int(skill.get("skill_id", 0)) > 0
+    }
+    skills.update(int(skill) for skill in account.get("selected_items", {}).get("loadouts", []) if int(skill) > 0)
+    skill_res = pb_varint_field(1, int(account["account_id"])) + pb_packed_varints(2, sorted(skills))
+    return b"".join([
+        pb_bytes_field(1, profile_res),
+        pb_bytes_field(2, skill_res),
+        pb_bytes_field(3, b""),
+    ])
+
+
+def profile_list_response(profiles: list[dict]) -> bytes:
+    return b"".join(pb_bytes_field(1, profile_wire(profile)) for profile in profiles)
+
+
+def select_profile_response(profile: dict) -> bytes:
+    return pb_bytes_field(1, profile_wire(profile))
+
+
+def change_clothes_response(profile: dict) -> bytes:
+    return pb_bytes_field(1, profile_wire(profile))
+
+
+def item_wire(item: dict) -> bytes:
+    out = bytearray()
+    out += pb_varint_field(1, int(item.get("id", 0)))
+    out += pb_varint_field(2, int(item.get("cnt", 0)))
+    out += pb_varint_field(3, int(item.get("expire_time", 0)))
+    out += pb_varint_field(4, int(item.get("left_use_times", 0)))
+    out += pb_varint_field(5, int(item.get("history_owned_cnt", 0)))
+    out += pb_varint_field(6, int(item.get("left_expire_time", 0)))
+    out += pb_varint_field(7, int(item.get("item_status", 0)))
+    return bytes(out)
+
+
+def selected_items_wire(account: dict) -> bytes:
+    """Literal source SelectedItems lifecycle, constrained to matched Sigma tags."""
+    selected = account["selected_items"]
+    out = bytearray()
+    out += pb_varint_field(1, int(selected.get("avatar_id", 0)))
+    out += pb_varint_field(2, int(selected.get("skin_color", 0)))
+    out += pb_packed_varints(3, list(selected.get("clothes", [])))
+    for loadout_id in selected.get("loadouts", []):
+        out += pb_bytes_field(4, pb_varint_field(1, int(loadout_id)))
+    out += pb_varint_field(5, int(selected.get("banner_id", 0)))
+    out += pb_varint_field(6, int(selected.get("head_pic", 0)))
+    out += pb_packed_varints(7, list(selected.get("slots", [])))
+    out += pb_packed_varints(9, list(selected.get("shows", [])))
+    return bytes(out)
+
+
+def account_info_basic_wire(account: dict) -> bytes:
+    """FreeFireServer buildAccountInfoBasic using matched Sigma field tags."""
+    selected = account["selected_items"]
+    badge_count = int(account.get("ep_badge_count", 0)) or 999
+    badge_id = int(account.get("ep_badge_id", 0)) or 1001000021
+    return b"".join([
+        pb_varint_field(1, int(account["account_id"])),
+        pb_varint_field(2, int(account.get("account_type", 0))),
+        pb_string_field(3, str(account.get("display_name") or "Player")),
+        pb_string_field(4, str(account.get("open_id") or "")),
+        pb_string_field(5, str(account.get("region") or DEFAULT_REGION)),
+        pb_varint_field(6, int(account.get("level", 1))),
+        pb_varint_field(7, int(account.get("exp", 0))),
+        pb_varint_field(11, int(selected.get("banner_id", 0))),
+        pb_varint_field(12, int(selected.get("head_pic", 0))),
+        pb_varint_field(14, int(account.get("rank", 1))),
+        pb_varint_field(15, int(account.get("ranking_points", 0))),
+        pb_varint_field(16, int(account.get("role", 0))),
+        pb_varint_field(18, badge_count),
+        pb_varint_field(19, badge_id),
+        pb_varint_field(20, 1),
+        pb_varint_field(21, 9999),
+        pb_varint_field(23, 1),
+        pb_packed_varints(32, list(selected.get("shows", []))),
+        pb_bytes_field(41, b""),
+    ])
+
+
+def backpack_response(account: dict, source_items: list[dict]) -> bytes:
+    selected = account["selected_items"]
+    wallet = account.get("wallet", {})
+    wallet_wire = pb_varint_field(1, int(wallet.get("coins", 0))) + pb_varint_field(2, int(wallet.get("gems", 0)))
+    selected_items = selected_items_wire(account)
+    ep_badge_id = 1001000021
+    items = [item for item in source_items if int(item.get("id", 0)) != ep_badge_id]
+    items.append({"id": ep_badge_id, "cnt": 999, "expire_time": 0, "left_use_times": -1, "history_owned_cnt": 999, "item_status": 1})
+    return pb_bytes_field(1, wallet_wire) + pb_bytes_field(2, selected_items) + b"".join(pb_bytes_field(3, item_wire(item)) for item in items)
+
+
+def store_response() -> bytes:
+    # Exact source GetStore sample: free item 102000006, marked new.
+    store = pb_varint_field(1, 1) + pb_varint_field(2, 1) + pb_varint_field(3, 102000006) + pb_varint_field(8, 0) + pb_varint_field(9, 0) + pb_varint_field(14, 1)
+    return pb_bytes_field(1, store)
+
+
+def personal_show_response(account: dict) -> bytes:
+    """Minimum source-compatible Personal Show for the matched Sigma consumer.
+
+    Keep source identity/presentation in basic_info and the selected profile,
+    while retaining V35's present empty DiamondCostRes. The source's ranking
+    position and repeated EP history remain omitted for this version-specific
+    compatibility test because their V36 addition blanked the Profile scene.
+    """
+    profile = selected_profile_from_account(account)
+    return (
+        pb_bytes_field(1, account_info_basic_wire(account))
+        + pb_bytes_field(2, profile_wire(profile))
+        + pb_bytes_field(10, b"")
+    )
+
+
+def account_info_response(account: dict) -> bytes:
+    return pb_bytes_field(1, account_info_basic_wire(account))
+
+
+def player_tc_stats_response(account: dict) -> bytes:
+    """CSGetPlayerTCStatsRes with present zeroed AccountInfoWithTCStats data.
+
+    Matched Sigma `AccountInfoWithTCStats` declares `detailed_stats` at field
+    5. Its nested `DetailedTCStats` is deliberately present but zero-length:
+    it supplies the required non-null message without fabricating any Clash
+    Squad counters, ratings, or match history.
+    """
+    stats = pb_varint_field(1, int(account["account_id"])) + pb_bytes_field(5, b"")
+    return pb_bytes_field(1, stats)
+
+
+def battle_tag_response() -> bytes:
+    """CSGetBattleTagRes: both declared repeated collections are intentionally empty."""
+    return b""
+
+
+def player_stats_response(account: dict) -> bytes:
+    """CSGetPlayerStatsRes with three non-null zeroed mode-stat messages.
+
+    Matched Sigma and the nearby source agree that fields 1, 2, and 3 are
+    solo, duo, and quad AccountInfoWithStatsToClient messages. Each nested
+    message has account_id at field 1; zero-valued counters are deliberately
+    omitted rather than fabricated.
+    """
+    zeroed_mode_stats = pb_varint_field(1, int(account["account_id"]))
+    return b"".join(pb_bytes_field(tag, zeroed_mode_stats) for tag in (1, 2, 3))
+
+
+def match_stats_history_response() -> bytes:
+    """CSGetMatchStatsListRes with an intentionally empty declared list.
+
+    GetMatchStatsHistory is command 0x84 and maps to this response model;
+    its repeated match_stats_list collection is field 1. No authentic match
+    records were supplied, so only the declared empty collection is emitted.
+    """
+    return b""
+
+
+def social_basic_info_response(account: dict) -> bytes:
+    """CSSocialBasicInfoRes with canonical identity only.
+
+    The matched response declares `info` at outer field 1 and the nested
+    `SocialBasicInfo.account_id` at field 1. No request-derived social,
+    signature, tag, or preference values are persisted because no source
+    lifecycle for this route was recovered.
+    """
+    info = pb_varint_field(1, int(account["account_id"]))
+    return pb_bytes_field(1, info)
+
+
+def activity_response(path: str) -> bytes:
+    if path.endswith("getattendance"):
+        return pb_bytes_field(2, pb_bytes_field(1, pb_bytes_field(1, b"")))
+    if path.endswith("getbingorewardsinfo") or path.endswith("getfestivalattendanceinfo"):
+        return pb_bytes_field(1, b"")
+    return b""
+
+
+class LocalState:
+    def __init__(self, root: Path):
+        self.root = root
+        self.logs = root / "logs"
+        self.logs.mkdir(parents=True, exist_ok=True)
+        self.server_log = self.logs / "server.log"
+        self.requests_log = self.logs / "requests.jsonl"
+        self.database_path = root / "data" / "sigma.db"
+        self.account_store = SQLiteAccountStore(
+            self.database_path,
+            root / "data" / "account_state.json",
+            root / "resources" / "source_default_profiles.json",
+            root / "resources" / "available_maps.json",
+        )
+        try:
+            item_root = json.loads((root / "resources" / "source_items.json").read_text(encoding="utf-8"))
+            self.source_items = list(item_root.get("items", [])) if isinstance(item_root, dict) else []
+        except (OSError, json.JSONDecodeError):
+            self.source_items = []
+        self.versioninfo = root / "resources" / "versioninfo"
+        self.fileinfo = root / "resources" / "fileinfo"
+        self.avatar_bundle = root / "resources" / "config_avatar.Vrc4N9ObUWOOK4MFJvqlN8W08eE~3D.gz"
+
+    @property
+    def account(self) -> dict:
+        return self.account_store.state
+
+
+class Handler(BaseHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
+    server_version = "SigmaCleanSourceFirst/V38"
+
+    def log_message(self, *_args) -> None:
+        return
+
+    @property
+    def state(self) -> LocalState:
+        return self.server.state  # type: ignore[attr-defined]
+
+    def base_url(self) -> str:
+        return "http://" + self.headers.get("Host", "127.0.0.1:3000") + "/"
+
+    def read_body(self) -> bytes:
+        try:
+            length = max(0, int(self.headers.get("Content-Length", "0")))
+        except ValueError:
+            length = 0
+        return self.rfile.read(length) if length else b""
+
+    def record(self, rid: str, path: str, body: bytes, response: bytes, status: int, note: str) -> None:
+        row = {
+            "timestamp": utc_now(), "request_id": rid, "method": self.command, "path": path,
+            "body_length": len(body), "body_sha256": hashlib.sha256(body).hexdigest() if body else None,
+            "response_status": status, "response_length": len(response),
+            "response_sha256": hashlib.sha256(response).hexdigest(), "note": note,
+        }
+        with self.state.requests_log.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, separators=(",", ":")) + "\n")
+        with self.state.server_log.open("a", encoding="utf-8") as handle:
+            handle.write(
+                f"{row['timestamp']} id={rid} method={self.command} path={path} status={status} "
+                f"body_len={len(body)} response_len={len(response)} note={note}\n"
+            )
+        print(
+            f"{row['timestamp']} [HTTP] {self.command} {path} -> {status} "
+            f"body={len(body)}B response={len(response)}B | {note}",
+            flush=True,
+        )
+
+    def send_body(self, status: int, response: bytes, content_type: str, rid: str, path: str, body: bytes, note: str, keep_alive: bool = False) -> None:
+        self.close_connection = not keep_alive
+        self.send_response(status)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(len(response)))
+        if keep_alive:
+            self.send_header("Connection", "keep-alive")
+            self.send_header("Keep-Alive", "timeout=65")
+            self.send_header("Accept-Ranges", "bytes")
+        else:
+            self.send_header("Connection", "close")
+            self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(response)
+        self.wfile.flush()
+        self.record(rid, path, body, response, status, note)
+
+    def version_response(self) -> bytes:
+        query = parse_qs(urlsplit(self.path).query)
+        remote_version = query.get("version", ["1.0.113"])[0]
+        base = self.base_url()
+        result = {
+            "code": 0, "ret": 0, "is_server_open": True, "is_firewall_open": True,
+            "need_track_hotupdate": False, "remote_version": remote_version,
+            "remote_option_version": OPTIONAL_VERSION, "server_url": base, "tcp_server":"http://127.0.0.1:10101",
+            "cdn_url": base, "backup_cdn_url": base, "abhotupdate_cdn_url": base,
+            "network_log_server": base, "web_log_server": base, "img_cdn_url": base,
+            "core_url": base, "country_code": str(self.state.account.get("region") or DEFAULT_REGION),
+            "sigma_login": True, "sigma_switch": True, "is_update_btn_show": False,
+            "use_login_optional_download": False, "use_background_download": False,
+            "use_background_download_lobby": False, "should_check_ab_load": False,
+            "sigma_backup_url": base.rstrip("/") + ";" + base.rstrip("/"),
+            "gop_url": base.rstrip("/") + ";" + base.rstrip("/"),
+            "googleClientId": "2518292083-8ld2che818jfrkjr5qnq13er6jf73gts.apps.googleusercontent.com",
+        }
+        return (json.dumps(result, separators=(",", ":")) + "\n").encode()
+
+    def do_GET(self) -> None:
+        self.dispatch()
+
+    def do_POST(self) -> None:
+        self.dispatch()
+
+    def dispatch(self) -> None:
+        rid = f"{int(time.time() * 1000)}-{uuid.uuid4().hex[:8]}"
+        body = self.read_body()
+        path = urlsplit(self.path).path.rstrip("/").lower() or "/"
+        account = self.state.account
+
+        if path in {"/available_maps", "/api/available_maps"}:
+            response = json.dumps(self.state.account_store.maps_payload(), separators=(",", ":")).encode() + b"\n"
+            self.send_body(200, response, "application/json; charset=utf-8", rid, path, body, "SQLite available_maps catalog")
+            return
+        if path in {"/liv/rct/ver.php", "/liv/r/ver.php", "/verphp/ver.php", "/liv/live/ver.php"}:
+            self.send_body(200, self.version_response(), "application/json; charset=utf-8", rid, path, body, "clean source-first local version response", keep_alive=True)
+            return
+        if path.endswith("/versioninfo") or path in {"/versioninfo", "/live/versioninfo.php", "/versioninfo.php"}:
+            response = self.state.versioninfo.read_bytes() if self.state.versioninfo.is_file() else b""
+            self.send_body(200, response, "text/plain", rid, path, body, "preserved local Sigma versioninfo")
+            return
+        if path.endswith("/fileinfo") or path in {"/fileinfo", "/live/fileinfo.php", "/fileinfo.php"}:
+            response = self.state.fileinfo.read_bytes() if self.state.fileinfo.is_file() else b""
+            self.send_body(200, response, "text/plain", rid, path, body, "preserved local Sigma fileinfo manifest")
+            return
+        if path.endswith("/config/avatar") or path.endswith("/config/avatar.vrc4n9obuwook4mfjvqln8w08ee~3d"):
+            response = self.state.avatar_bundle.read_bytes() if self.state.avatar_bundle.is_file() else b""
+            self.send_body(200, response, "application/octet-stream", rid, path, body, "preserved local Sigma config/avatar bundle")
+            return
+        if path in {"/oauth/token/inspect", "/live/oauth/token/inspect"}:
+            response = json.dumps({
+                "open_id": "100000001",
+                "access_token": "GUEST_TOKEN_1788345552",
+                "refresh_token": "GUEST_TOKEN_1788345552",
+                "expiry_time": 1819881552,
+                "platform": 4,
+                "uid": "100000001",
+                "ret": 0,
+                "msg": "success",
+            }, separators=(",", ":")).encode() + b"\n"
+            self.send_body(200, response, "application/json; charset=utf-8", rid, path, body, "guest OAuth token inspection compatibility")
+            return
+        if path in {"/oauth/token/checkbind", "/live/oauth/token/checkbind", "/oauth/token", "/live/oauth/token", "/oauth/token/google/exchange", "/live/oauth/token/google/exchange"}:
+            response = json.dumps({"ret": 0, "errCode": 0, "msg": "success", "openID": "LOCAL_SIGMA_OPEN_ID", "open_id": "LOCAL_SIGMA_OPEN_ID", "accessToken": "LOCAL_SIGMA_ACCESS_TOKEN", "access_token": "LOCAL_SIGMA_ACCESS_TOKEN", "refresh_token": "LOCAL_SIGMA_REFRESH_TOKEN", "expiry_time": 4102444800, "platform": 8, "mainPlatform": 8, "uid": "LOCAL_SIGMA_OPEN_ID"}, separators=(",", ":")).encode() + b"\n"
+            self.send_body(200, response, "application/json; charset=utf-8", rid, path, body, "local OAuth compatibility only")
+            return
+        if path in {"/oauth/guest/register", "/oauth/guest/create", "/live/oauth/guest/register", "/live/oauth/guest/create"}:
+            response = json.dumps({"open_id": "LOCAL_SIGMA_GUEST", "access_token": "LOCAL_SIGMA_GUEST_TOKEN", "refresh_token": "LOCAL_SIGMA_GUEST_REFRESH", "expiry_time": 4102444800, "platform": 4, "uid": "LOCAL_SIGMA_GUEST", "ret": 0, "msg": "success"}, separators=(",", ":")).encode() + b"\n"
+            self.send_body(200, response, "application/json; charset=utf-8", rid, path, body, "local guest compatibility only")
+            return
+        if path in {"/oauth/guest/token/grant", "/live/oauth/guest/token/grant"}:
+            response = json.dumps({
+                "open_id": "100000001",
+                "access_token": "GUEST_TOKEN_1788345552",
+                "refresh_token": "GUEST_TOKEN_1788345552",
+                "expiry_time": 1819881552,
+                "platform": 4,
+                "uid": "100000001",
+                "ret": 0,
+                "msg": "success",
+            }, separators=(",", ":")).encode() + b"\n"
+            self.send_body(200, response, "application/json; charset=utf-8", rid, path, body, "local guest token grant compatibility only")
+            return
+        if path in {"/bind/app/platform/info/get", "/live/bind/app/platform/info/get"}:
+            self.send_body(200, b'{"available_platforms":[],"bounded_accounts":[]}\n', "application/json; charset=utf-8", rid, path, body, "Sigma SDKBind empty platform collections")
+            return
+        if path in {"/majorlogin", "/live/majorlogin"}:
+            self.send_body(200, major_login_response(self, account), "application/x-protobuf", rid, path, body, "source-first canonical session projected through Sigma MajorLoginRes")
+            return
+        if path in {"/majorregister", "/live/majorregister"}:
+            response = pb_varint_field(1, int(account["account_id"])) + pb_varint_field(2, 1) + pb_varint_field(3, 1) + pb_varint_field(4, 1)
+            self.send_body(200, response, "application/x-protobuf", rid, path, body, "source-first bounded canonical account registration response")
+            return
+        if path in {"/getlogindata", "/live/getlogindata"}:
+            self.send_body(200, login_data_response(account), "application/x-protobuf", rid, path, body, "Sigma LoginRes from canonical local account")
+            return
+        if path in {"/logingetdesc", "/live/logingetdesc"}:
+            self.send_body(200, login_desc_response(), "application/x-protobuf", rid, path, body, "V25-preserved non-empty Sigma hide-avatar descriptor")
+            return
+        if path in {"/gethideavatar", "/live/gethideavatar"}:
+            self.send_body(200, hide_avatar_body(), "application/x-protobuf", rid, path, body, "V25-preserved CSGetHideAvatarRes")
+            return
+        if path in {"/getaccountfreshinfo", "/live/getaccountfreshinfo"}:
+            self.send_body(200, pb_varint_field(1, 0) + pb_varint_field(2, 0), "application/x-protobuf", rid, path, body, "structural Sigma account-fresh response")
+            return
+        if path in {"/getplatformprofile", "/live/getplatformprofile"}:
+            self.send_body(200, pb_string_field(1, first_string_field(body, 2)), "application/x-protobuf", rid, path, body, "request-derived PlatformProfile external ID")
+            return
+        if path in {"/logingetprofile", "/live/logingetprofile"}:
+            self.send_body(200, login_profile_response(account, self.state.account_store.visible_profiles()), "application/x-protobuf", rid, path, body, "source default profile roster via Sigma LoginProfileRes")
+            return
+        if path in {"/getprofiles", "/live/getprofiles"}:
+            self.send_body(200, profile_list_response(self.state.account_store.visible_profiles()), "application/x-protobuf", rid, path, body, "V30 profile roster cardinality matches LoginGetProfile")
+            return
+        if path in {"/selectprofile", "/live/selectprofile"}:
+            profile, accepted = self.state.account_store.select_profile(first_varint_field(body, 1))
+            note = "selected existing canonical profile" if accepted else "unrecovered profile request retained canonical selection"
+            self.send_body(200, select_profile_response(profile), "application/x-protobuf", rid, path, body, note)
+            return
+        if path in {"/changeclothes", "/live/changeclothes"}:
+            profile = self.state.account_store.change_clothes(first_varint_field(body, 1), repeated_varint_field(body, 2), first_varint_field(body, 3))
+            if profile is None:
+                self.send_body(200, b"", "application/x-protobuf", rid, path, body, "source-style unknown profile leaves canonical state unchanged")
+            else:
+                self.send_body(200, change_clothes_response(profile), "application/x-protobuf", rid, path, body, "source ChangeClothes mutation persisted and selected-items synchronized")
+            return
+        if path in {"/getbackpack", "/live/getbackpack"}:
+            self.send_body(200, backpack_response(account, self.state.source_items), "application/x-protobuf", rid, path, body, "source default wallet, selected-items, and source items.json ownership projection")
+            return
+        if path in {"/getplayerpersonalshow", "/live/getplayerpersonalshow"}:
+            self.send_body(200, personal_show_response(account), "application/x-protobuf", rid, path, body, "source full basic-account and selected-profile personal-show projection")
+            return
+        if path in {"/getplayertcstats", "/live/getplayertcstats"}:
+            self.send_body(200, player_tc_stats_response(account), "application/x-protobuf", rid, path, body, "V33 non-null AccountInfoWithTCStats with present zeroed DetailedTCStats")
+            return
+        if path in {"/getbattletag", "/live/getbattletag"}:
+            self.send_body(200, battle_tag_response(), "application/x-protobuf", rid, path, body, "V31 declared empty Sigma Battle Tag collections")
+            return
+        if path in {"/getplayerstats", "/live/getplayerstats"}:
+            self.send_body(200, player_stats_response(account), "application/x-protobuf", rid, path, body, "V32 non-null zeroed CSGetPlayerStatsRes for solo, duo, and quad")
+            return
+        if path in {"/getmatchstatshistory", "/live/getmatchstatshistory"}:
+            self.send_body(200, match_stats_history_response(), "application/x-protobuf", rid, path, body, "V32 declared empty CSGetMatchStatsListRes; no match data fabricated")
+            return
+        if path in {"/getaccountinfobyaccountid", "/live/getaccountinfobyaccountid"}:
+            self.send_body(200, account_info_response(account), "application/x-protobuf", rid, path, body, "Sigma AccountInfoBasic bounded identity projection")
+            return
+        if path in {"/setpregameshowchoices", "/live/setpregameshowchoices"}:
+            self.send_body(200, b"", "application/x-protobuf", rid, path, body, "V34 declared-empty acknowledgement for CSSetPregameShowChoicesReq")
+            return
+        if path in {"/updatesocialbasicinfo", "/live/updatesocialbasicinfo"}:
+            self.send_body(200, social_basic_info_response(account), "application/x-protobuf", rid, path, body, "V34 CSSocialBasicInfoRes with canonical account ID only; no social state persisted")
+            return
+        if path in {"/getattendance", "/live/getattendance", "/getbingorewardsinfo", "/live/getbingorewardsinfo", "/getfestivalattendanceinfo", "/live/getfestivalattendanceinfo"}:
+            self.send_body(200, activity_response(path), "application/x-protobuf", rid, path, body, "structural activity container without fabricated values")
+            return
+        if path in {"/getstore", "/live/getstore"}:
+            self.send_body(200, store_response(), "application/x-protobuf", rid, path, body, "actual uploaded-source GetStore free character projection")
+            return
+        if path in {"/getplatformfriends", "/live/getplatformfriends"}:
+            self.send_body(200, b"", "application/x-protobuf", rid, path, body, "actual source platform-friend default AccountFriendRes")
+            return
+        if path in {"/getplatformfriendids", "/live/getplatformfriendids", "/getfriendids", "/live/getfriendids", "/maingetfriendids", "/live/maingetfriendids"}:
+            self.send_body(200, b"", "application/x-protobuf", rid, path, body, "actual source canonical empty AccountIDSlice")
+            return
+        if path in {"/getfriend", "/live/getfriend", "/getmaillist", "/live/getmaillist"}:
+            self.send_body(200, b"", "application/x-protobuf", rid, path, body, "actual source canonical empty friend or mail collection")
+            return
+        if path in {"/getunlockedfittingslots", "/live/getunlockedfittingslots", "/unlockfittingslot", "/live/unlockfittingslot", "/getepinfo", "/live/getepinfo", "/getexchangestore", "/live/getexchangestore", "/getfriendrequestlist", "/live/getfriendrequestlist", "/getblockedids", "/live/getblockedids", "/getrecommendedfriend", "/live/getrecommendedfriend", "/getintimacyrankawardinfo", "/live/getintimacyrankawardinfo", "/getplayerpersonalinfo", "/live/getplayerpersonalinfo", "/logingetsplash", "/live/logingetsplash", "/getreportmaillist", "/live/getreportmaillist", "/getcreditscoredesc", "/live/getcreditscoredesc", "/getcreditscoreinfo", "/live/getcreditscoreinfo", "/logingetbroadcast", "/live/logingetbroadcast", "/logevent", "/live/logevent", "/networklogevent", "/live/networklogevent"}:
+            self.send_body(200, b"", "application/x-protobuf", rid, path, body, "observed Sigma route with evidence-bounded empty protobuf")
+            return
+        self.send_body(404, b'{"error":"unknown_route"}\n', "application/json; charset=utf-8", rid, path, body, "unknown route logged and rejected")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="SQLite-backed source-first local Sigma 1.0.113 compatibility server")
+    parser.add_argument("--host", default="0.0.0.0")
+    parser.add_argument("--port", default=3000, type=int)
+    parser.add_argument("--root", default=str(ROOT))
+    args = parser.parse_args()
+    root = Path(args.root).resolve()
+    server = ThreadingHTTPServer((args.host, args.port), Handler)
+    server.state = LocalState(root)  # type: ignore[attr-defined]
+    with server.state.server_log.open("a", encoding="utf-8") as handle:  # type: ignore[attr-defined]
+        handle.write(f"{utc_now()} START v38_sqlite_maps host={args.host} port={args.port} db={server.state.database_path}\n")
+    print(f"SQLite-backed Sigma source-first server listening on {args.host}:{args.port}", flush=True)
+    server.serve_forever()
+
+
+if __name__ == "__main__":
+    main()

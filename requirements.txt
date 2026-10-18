@@ -1,0 +1,4 @@
+# Python dependencies for Render deploy.
+# The Python services (test_server.py, notification_gateway.py, tcp.py, udp*.py)
+# use only the standard library, so nothing needs to be installed.
+# Add pinned packages below if you introduce any (e.g. requests==2.32.3).

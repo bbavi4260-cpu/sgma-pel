@@ -1,0 +1,76 @@
+SQLite-backed Sigma source-first server listening on 0.0.0.0:3000
+2026-10-18T08:30:16.108+00:00 [HTTP] GET /liv/rct/ver.php -> 200 body=0B response=1273B | clean source-first local version response
+2026-10-18T08:30:20.802+00:00 [HTTP] GET /liv/rct/ver.php -> 200 body=0B response=1273B | clean source-first local version response
+2026-10-18T08:30:23.467+00:00 [HTTP] GET / -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:30:26.966+00:00 [HTTP] GET / -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:30:53.976+00:00 [HTTP] POST /majorlogin -> 200 body=803B response=102B | source-first canonical session projected through Sigma MajorLoginRes
+2026-10-18T08:30:54.086+00:00 [HTTP] POST /getlogindata -> 200 body=809B response=264B | Sigma LoginRes from canonical local account
+2026-10-18T08:30:54.860+00:00 [HTTP] GET /getaccountfreshinfo -> 200 body=0B response=4B | structural Sigma account-fresh response
+2026-10-18T08:30:54.960+00:00 [HTTP] POST /getplatformprofile -> 200 body=43B response=11B | request-derived PlatformProfile external ID
+2026-10-18T08:30:55.070+00:00 [HTTP] GET /getfriendrequestlist -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:30:55.113+00:00 [HTTP] POST /logingetdesc -> 200 body=13B response=14B | V25-preserved non-empty Sigma hide-avatar descriptor
+2026-10-18T08:30:56.989+00:00 [HTTP] GET /logingetprofile -> 200 body=0B response=1938B | source default profile roster via Sigma LoginProfileRes
+2026-10-18T08:30:57.150+00:00 [HTTP] GET / -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:30:57.160+00:00 [HTTP] GET / -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:30:57.754+00:00 [HTTP] POST /getplayerpersonalshow -> 200 body=5B response=146B | source full basic-account and selected-profile personal-show projection
+2026-10-18T08:30:57.993+00:00 [HTTP] GET /getunlockedfittingslots -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:30:58.024+00:00 [HTTP] POST /logingetsplash -> 200 body=8B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:30:58.071+00:00 [HTTP] GET /getfriendids -> 200 body=0B response=0B | actual source canonical empty AccountIDSlice
+2026-10-18T08:30:59.915+00:00 [HTTP] POST /getbackpack -> 200 body=6B response=841159B | source default wallet, selected-items, and source items.json ownership projection
+2026-10-18T08:31:00.901+00:00 [HTTP] POST /getmaillist -> 200 body=4B response=0B | actual source canonical empty friend or mail collection
+2026-10-18T08:31:00.937+00:00 [HTTP] GET /getreportmaillist -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:00.985+00:00 [HTTP] GET /getattendance -> 200 body=0B response=6B | structural activity container without fabricated values
+2026-10-18T08:31:01.047+00:00 [HTTP] GET /getfriend -> 200 body=0B response=0B | actual source canonical empty friend or mail collection
+2026-10-18T08:31:01.112+00:00 [HTTP] POST /getplatformfriends -> 200 body=34B response=0B | actual source platform-friend default AccountFriendRes
+2026-10-18T08:31:02.558+00:00 [HTTP] GET /getbingorewardsinfo -> 200 body=0B response=2B | structural activity container without fabricated values
+2026-10-18T08:31:02.625+00:00 [HTTP] GET /getcreditscoredesc -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:02.664+00:00 [HTTP] GET /getcreditscoreinfo -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:31:02.727+00:00 [HTTP] GET /getprofiles -> 200 body=0B response=1817B | V30 profile roster cardinality matches LoginGetProfile
+2026-10-18T08:31:02.787+00:00 [HTTP] GET /getfestivalattendanceinfo -> 200 body=0B response=2B | structural activity container without fabricated values
+2026-10-18T08:31:03.027+00:00 [HTTP] POST /selectprofile -> 200 body=5B response=40B | selected existing canonical profile
+2026-10-18T08:31:03.076+00:00 [HTTP] POST /unlockfittingslot -> 200 body=2B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:03.116+00:00 [HTTP] POST /getplatformfriendids -> 200 body=34B response=0B | actual source canonical empty AccountIDSlice
+2026-10-18T08:31:03.154+00:00 [HTTP] GET /getepinfo -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:03.371+00:00 [HTTP] POST /getstore -> 200 body=4B response=17B | actual uploaded-source GetStore free character projection
+2026-10-18T08:31:03.496+00:00 [HTTP] POST /getexchangestore -> 200 body=4B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:03.593+00:00 [HTTP] POST /selectprofile -> 200 body=5B response=40B | selected existing canonical profile
+2026-10-18T08:31:03.999+00:00 [HTTP] POST /logingetbroadcast -> 200 body=8B response=59B | LoginBroadcastRes with configurable lobby scrolling marquee
+2026-10-18T08:31:12.930+00:00 [HTTP] POST /majorlogin -> 200 body=794B response=90B | source-first canonical session projected through Sigma MajorLoginRes
+2026-10-18T08:31:13.059+00:00 [HTTP] POST /getlogindata -> 200 body=800B response=267B | Sigma LoginRes from canonical local account
+2026-10-18T08:31:13.927+00:00 [HTTP] GET /getaccountfreshinfo -> 200 body=0B response=4B | structural Sigma account-fresh response
+2026-10-18T08:31:14.011+00:00 [HTTP] POST /getplatformprofile -> 200 body=37B response=11B | request-derived PlatformProfile external ID
+2026-10-18T08:31:14.128+00:00 [HTTP] GET /getfriendrequestlist -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:14.214+00:00 [HTTP] POST /logingetdesc -> 200 body=13B response=14B | V25-preserved non-empty Sigma hide-avatar descriptor
+2026-10-18T08:31:15.631+00:00 [HTTP] GET /logingetprofile -> 200 body=0B response=1938B | source default profile roster via Sigma LoginProfileRes
+2026-10-18T08:31:15.715+00:00 [HTTP] GET / -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:31:15.725+00:00 [HTTP] GET / -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:31:16.248+00:00 [HTTP] POST /getplayerpersonalshow -> 200 body=5B response=145B | source full basic-account and selected-profile personal-show projection
+2026-10-18T08:31:16.428+00:00 [HTTP] GET /getunlockedfittingslots -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:16.495+00:00 [HTTP] POST /logingetsplash -> 200 body=8B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:16.547+00:00 [HTTP] GET /getfriendids -> 200 body=0B response=0B | actual source canonical empty AccountIDSlice
+2026-10-18T08:31:18.265+00:00 [HTTP] POST /getbackpack -> 200 body=6B response=841159B | source default wallet, selected-items, and source items.json ownership projection
+2026-10-18T08:31:18.997+00:00 [HTTP] POST /getmaillist -> 200 body=4B response=0B | actual source canonical empty friend or mail collection
+2026-10-18T08:31:19.038+00:00 [HTTP] GET /getreportmaillist -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:19.072+00:00 [HTTP] GET /getattendance -> 200 body=0B response=6B | structural activity container without fabricated values
+2026-10-18T08:31:19.171+00:00 [HTTP] GET /getfriend -> 200 body=0B response=0B | actual source canonical empty friend or mail collection
+2026-10-18T08:31:19.274+00:00 [HTTP] POST /getplatformfriends -> 200 body=28B response=0B | actual source platform-friend default AccountFriendRes
+2026-10-18T08:31:20.151+00:00 [HTTP] GET /getbingorewardsinfo -> 200 body=0B response=2B | structural activity container without fabricated values
+2026-10-18T08:31:20.226+00:00 [HTTP] GET /getcreditscoredesc -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:20.277+00:00 [HTTP] GET /getcreditscoreinfo -> 404 body=0B response=26B | unknown route logged and rejected
+2026-10-18T08:31:20.333+00:00 [HTTP] GET /getprofiles -> 200 body=0B response=1817B | V30 profile roster cardinality matches LoginGetProfile
+2026-10-18T08:31:20.398+00:00 [HTTP] GET /getfestivalattendanceinfo -> 200 body=0B response=2B | structural activity container without fabricated values
+2026-10-18T08:31:20.554+00:00 [HTTP] POST /selectprofile -> 200 body=5B response=40B | selected existing canonical profile
+2026-10-18T08:31:20.597+00:00 [HTTP] POST /unlockfittingslot -> 200 body=2B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:20.618+00:00 [HTTP] POST /getplatformfriendids -> 200 body=28B response=0B | actual source canonical empty AccountIDSlice
+2026-10-18T08:31:20.653+00:00 [HTTP] GET /getepinfo -> 200 body=0B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:20.864+00:00 [HTTP] POST /getstore -> 200 body=4B response=17B | actual uploaded-source GetStore free character projection
+2026-10-18T08:31:20.935+00:00 [HTTP] POST /getexchangestore -> 200 body=4B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:21.036+00:00 [HTTP] POST /selectprofile -> 200 body=5B response=40B | selected existing canonical profile
+2026-10-18T08:31:21.672+00:00 [HTTP] POST /logingetbroadcast -> 200 body=8B response=59B | LoginBroadcastRes with configurable lobby scrolling marquee
+2026-10-18T08:31:35.652+00:00 [HTTP] POST /logevent -> 200 body=819B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:31:37.706+00:00 [HTTP] POST /logevent -> 200 body=819B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:32:46.069+00:00 [HTTP] POST /networklogevent -> 200 body=308B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:33:00.499+00:00 [HTTP] POST /logevent -> 200 body=173B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:33:00.527+00:00 [HTTP] POST /logevent -> 200 body=119B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:33:07.853+00:00 [HTTP] POST /logevent -> 200 body=173B response=0B | observed Sigma route with evidence-bounded empty protobuf
+2026-10-18T08:33:07.929+00:00 [HTTP] POST /logevent -> 200 body=119B response=0B | observed Sigma route with evidence-bounded empty protobuf
