@@ -1,4 +1,16 @@
-# Python dependencies for Render deploy.
-# The Python services (test_server.py, notification_gateway.py, tcp.py, udp*.py)
-# use only the standard library, so nothing needs to be installed.
-# Add pinned packages below if you introduce any (e.g. requests==2.32.3).
+# Web Framework & API Server
+flask>=3.0.0
+gunicorn>=21.2.0
+
+# WebSocket & Networking Support (TCP/UDP Python Game Nodes)
+websockets>=12.0
+asyncio>=3.4.3
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Database & Storage
+sqlalchemy>=2.0.0
+
+# Utility & Async Helpers
+python-dotenv>=1.0.0
+setuptools>=68.0.0
